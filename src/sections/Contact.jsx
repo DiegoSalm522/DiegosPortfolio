@@ -1,13 +1,13 @@
-import { useState } from "react"
-import emailjs from "@emailjs/browser"
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 
 const Contact = () => {
-  const[formData, setformData] = useState({
-    name:"", 
-    email:"", 
-    message:""
+  const [formData, setformData] = useState({
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -16,44 +16,50 @@ const Contact = () => {
   const [alertMessage, setAlertMessage] = useState("");
 
   const handleChange = (e) => {
-    setformData({...formData, [e.target.name]: e.target.value})
-  }
+    setformData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const showAlertMessage = (type, message) => {
     setAlertType(type);
     setAlertMessage(message);
     setShowAlert(true);
     setTimeout(() => {
-    setShowAlert(false);
+      setShowAlert(false);
     }, 5000);
   };
 
-  const handleSubmit = async (e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    try{
+    try {
       console.log("Form submitted:", formData);
-      await emailjs.send("service_yxu9crj", "template_b4fnp0n", {
-        from_name: formData.name,
-        to_name: "Diego",
-        from_email: formData.email,
-        to_email:"diegosalm522@gmail.com",
-        message: formData.message,
-      },
-      "YhOMjHZNFwKj8ePHZ"
-    );
-    setIsLoading(false);
-    showAlertMessage("success", "Your message has been sent");
-    setformData({name: "", email: "", message: ""});
-    } catch(error){
+      await emailjs.send(
+        "service_yxu9crj",
+        "template_b4fnp0n",
+        {
+          from_name: formData.name,
+          to_name: "Diego",
+          from_email: formData.email,
+          to_email: "diegosalm522@gmail.com",
+          message: formData.message,
+        },
+        "YhOMjHZNFwKj8ePHZ"
+      );
+      setIsLoading(false);
+      showAlertMessage("success", "Your message has been sent");
+      setformData({ name: "", email: "", message: "" });
+    } catch (error) {
       setIsLoading(false);
       console.log(error);
       showAlertMessage("danger", "Something went wrong");
     }
   };
-  
+
   return (
-    <section id="contact" className="relative flex items-center c-space section-spacing py-8 h-screen">
+    <section
+      id="contact"
+      className="relative flex items-center c-space section-spacing py-8 h-screen"
+    >
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
@@ -68,11 +74,13 @@ const Contact = () => {
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
-            <label htmlFor="name" className="field-label">Full Name</label>
-            <input 
-              id="name" 
-              name="name" 
-              type="text" 
+            <label htmlFor="name" className="field-label">
+              Full Name
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
               className="field-input field-input-focus"
               placeholder="Your full name"
               autoComplete="name"
@@ -82,11 +90,13 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="email" className="field-label">Email</label>
-            <input 
-              id="email" 
-              name="email" 
-              type="email" 
+            <label htmlFor="email" className="field-label">
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
               className="field-input field-input-focus"
               placeholder="Your email"
               autoComplete="email"
@@ -96,11 +106,13 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="message" className="field-label">Message</label>
-            <textarea 
-              id="message" 
-              name="message" 
-              type="text" 
+            <label htmlFor="message" className="field-label">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              type="text"
               rows="4"
               className="field-input field-input-focus"
               placeholder="Write your message"
@@ -111,12 +123,12 @@ const Contact = () => {
             />
           </div>
           <button className="w-full px-1 py-3 text-[18px] text-center rounded-md cursor-pointer bg-cyan-600 hover-animation">
-            {!isLoading? "Send": "Sending..."}
+            {!isLoading ? "Send" : "Sending..."}
           </button>
         </form>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

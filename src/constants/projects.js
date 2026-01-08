@@ -2,7 +2,8 @@ export const projects = [
   {
     id: 1,
     title: "Diego's Portfolio",
-    description: "Personal portfolio website showcasing software development projects and skills.",
+    description:
+      "Personal portfolio website showcasing software development projects and skills.",
     demo: "https://diegosalmones-portfolio.vercel.app/",
     repository: "https://github.com/DiegoSalm522/DiegosPortfolio",
     image: "/assets/projects/diegos-portfolio/img0.jpg",
@@ -11,7 +12,7 @@ export const projects = [
       "/assets/projects/diegos-portfolio/img1.jpg",
       "/assets/projects/diegos-portfolio/img2.jpg",
       "/assets/projects/diegos-portfolio/img3.jpg",
-      "/assets/projects/diegos-portfolio/img4.jpg"
+      "/assets/projects/diegos-portfolio/img4.jpg",
     ],
     tags: [
       {
@@ -39,7 +40,8 @@ export const projects = [
   {
     id: 2,
     title: "Phone Planet",
-    description: "E-commerce web application for a cellphone store featuring 8 brands, 180+ products, and 800+ variants.",
+    description:
+      "E-commerce web application for a cellphone store featuring 8 brands, 180+ products, and 800+ variants.",
     demo: "https://phone-planet.vercel.app/",
     repository: "https://github.com/DiegoSalm522/PhonePlanet",
     image: "/assets/projects/phone-planet/img0.jpg",
@@ -51,7 +53,7 @@ export const projects = [
       "/assets/projects/phone-planet/img4.jpg",
       "/assets/projects/phone-planet/img5.jpg",
       "/assets/projects/phone-planet/img6.jpg",
-      "/assets/projects/phone-planet/img7.jpg"
+      "/assets/projects/phone-planet/img7.jpg",
     ],
     tags: [
       {
@@ -79,7 +81,8 @@ export const projects = [
   {
     id: 3,
     title: "Star Wars Planets Blog",
-    description: "Web application inspired by the Star Wars universe to explore and learn about different planets through a blog-style interface.",
+    description:
+      "Web application inspired by the Star Wars universe to explore and learn about different planets through a blog-style interface.",
     demo: "https://star-wars-blog-ten.vercel.app/",
     repository: "https://github.com/DiegoSalm522/StarWarsBlog",
     image: "/assets/projects/sw-blog/img0.jpg",
@@ -89,7 +92,7 @@ export const projects = [
       "/assets/projects/sw-blog/img2.jpg",
       "/assets/projects/sw-blog/img3.jpg",
       "/assets/projects/sw-blog/img4.jpg",
-      "/assets/projects/sw-blog/img5.jpg"
+      "/assets/projects/sw-blog/img5.jpg",
     ],
     tags: [
       {
@@ -126,13 +129,14 @@ export const projects = [
         id: 7,
         name: "PostgreSQL",
         path: "/assets/logos/postgresql.png",
-      }
+      },
     ],
   },
   {
     id: 4,
     title: "Popflix",
-    description: "Streaming-style web application powered by the TMDB API, showcasing movies and TV shows.",
+    description:
+      "Streaming-style web application powered by the TMDB API, showcasing movies and TV shows.",
     demo: "https://popflix-three.vercel.app/",
     repository: "https://github.com/DiegoSalm522/Popflix",
     image: "/assets/projects/popflix/img0.jpg",
@@ -144,7 +148,7 @@ export const projects = [
       "/assets/projects/popflix/img4.jpg",
       "/assets/projects/popflix/img5.jpg",
       "/assets/projects/popflix/img6.jpg",
-      "/assets/projects/popflix/img7.jpg"
+      "/assets/projects/popflix/img7.jpg",
     ],
     tags: [
       {
@@ -172,7 +176,8 @@ export const projects = [
   {
     id: 5,
     title: "Bazaar Profit Management Dashboard",
-    description: "System for managing the profits of a children's hospital bazaar, combining a mobile app for sellers and a web platform for administrators.",
+    description:
+      "System for managing the profits of a children's hospital bazaar, combining a mobile app for sellers and a web platform for administrators.",
     repository: "https://github.com/ErwinPo/BazarAdmin",
     image: "/assets/projects/bazaar/img0.jpg",
     gallery: [
@@ -181,7 +186,7 @@ export const projects = [
       "/assets/projects/bazaar/img2.jpg",
       "/assets/projects/bazaar/img3.jpg",
       "/assets/projects/bazaar/img4.jpg",
-      "/assets/projects/bazaar/img5.jpg"
+      "/assets/projects/bazaar/img5.jpg",
     ],
     tags: [
       {
@@ -219,7 +224,8 @@ export const projects = [
   {
     id: 6,
     title: "Expoingenierias Web Platform",
-    description: "Web platform developed for managing the engineering projects exhibition at my university, including project registration, evaluation, and administration.",
+    description:
+      "Web platform developed for managing the engineering projects exhibition at my university, including project registration, evaluation, and administration.",
     repository: "https://github.com/RogerHdzC/TC2005B",
     image: "/assets/projects/expo-ingenierias/img0.jpg",
     gallery: [
@@ -231,7 +237,7 @@ export const projects = [
       "/assets/projects/expo-ingenierias/img5.jpg",
       "/assets/projects/expo-ingenierias/img6.jpg",
       "/assets/projects/expo-ingenierias/img7.jpg",
-      "/assets/projects/expo-ingenierias/img8.jpg"
+      "/assets/projects/expo-ingenierias/img8.jpg",
     ],
     tags: [
       {
@@ -269,7 +275,8 @@ export const projects = [
   {
     id: 7,
     title: "Reecicla App",
-    description: "Mobile app for iOS and Android developed for a recycling company; users are able to request home recycling pickups or locate drop-off points on a map.",
+    description:
+      "Mobile app for iOS and Android developed for a recycling company; users are able to request home recycling pickups or locate drop-off points on a map.",
     repository: "https://github.com/DiegoSalm522/Reecicla-App",
     image: "/assets/projects/reecicla-app/reeciclaapp.jpg",
     gallery: [
@@ -278,7 +285,7 @@ export const projects = [
       "/assets/projects/reecicla-app/img2.jpg",
       "/assets/projects/reecicla-app/img3.jpg",
       "/assets/projects/reecicla-app/img4.jpg",
-      "/assets/projects/reecicla-app/img5.jpg"
+      "/assets/projects/reecicla-app/img5.jpg",
     ],
     tags: [
       {
@@ -316,7 +323,8 @@ export const projects = [
   {
     id: 8,
     title: "Grief: The Journey of Loss - Video Game",
-    description: "3D emotional adventure video game combining platforming and puzzle mechanics, exploring the stages of grief through the story of Darwin.",
+    description:
+      "3D emotional adventure video game combining platforming and puzzle mechanics, exploring the stages of grief through the story of Darwin.",
     demo: "https://diegosalm522.itch.io/grief-the-journey-of-loss",
     repository: "",
     image: "/assets/projects/grief/img0.jpg",
@@ -326,7 +334,7 @@ export const projects = [
       "/assets/projects/grief/img2.jpg",
       "/assets/projects/grief/img3.jpg",
       "/assets/projects/grief/img4.jpg",
-      "/assets/projects/grief/img5.jpg"
+      "/assets/projects/grief/img5.jpg",
     ],
     tags: [
       {
@@ -354,12 +362,11 @@ export const projects = [
   {
     id: 9,
     title: "2D Pacman",
-    description: "2D recreation of the classic Pacman video game, built with OpenGL and C++.",
+    description:
+      "2D recreation of the classic Pacman video game, built with OpenGL and C++.",
     repository: "https://github.com/DiegoSalm522/Pacman",
     image: "/assets/projects/pacman/img0.jpg",
-    gallery: [
-      "/assets/projects/pacman/img0.jpg"
-    ],
+    gallery: ["/assets/projects/pacman/img0.jpg"],
     tags: [
       {
         id: 1,
@@ -381,12 +388,11 @@ export const projects = [
   {
     id: 10,
     title: "Little Duck Compiler",
-    description: "Compiler for the mini-imperative language Little Duck, implementing lexical, syntactic, and semantic analysis phases.",
+    description:
+      "Compiler for the mini-imperative language Little Duck, implementing lexical, syntactic, and semantic analysis phases.",
     repository: "https://github.com/DiegoSalm522/Proyecto-Patito",
     image: "/assets/projects/compiler/img0.jpg",
-    gallery: [
-      "/assets/projects/compiler/img0.jpg"
-    ],
+    gallery: ["/assets/projects/compiler/img0.jpg"],
     tags: [
       {
         id: 1,

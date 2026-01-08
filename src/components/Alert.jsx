@@ -6,7 +6,7 @@ const Alert = ({ type, text }) => {
     visible: { opacity: 1, y: 0, scale: 1 },
     exit: { opacity: 0, y: -50, scale: 0.8 },
   };
-  
+
   return (
     <AnimatePresence>
       <motion.div

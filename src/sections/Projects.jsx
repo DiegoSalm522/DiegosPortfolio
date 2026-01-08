@@ -1,7 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
-import { MdOutlineComputer, MdPhoto, MdClose, MdChevronLeft, MdChevronRight} from "react-icons/md";
-import { projects } from '../constants/projects';
+import {
+  MdOutlineComputer,
+  MdPhoto,
+  MdClose,
+  MdChevronLeft,
+  MdChevronRight,
+} from "react-icons/md";
+import { projects } from "../constants/projects";
 
 const Projects = () => {
   const [selectedGallery, setSelectedGallery] = useState(null);
@@ -9,12 +15,12 @@ const Projects = () => {
 
   useEffect(() => {
     if (selectedGallery) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [selectedGallery]);
 
@@ -29,19 +35,19 @@ const Projects = () => {
   };
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === selectedGallery.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === 0 ? selectedGallery.length - 1 : prev - 1
     );
   };
 
   return (
-    <section id='projects' className="c-space section-spacing">
+    <section id="projects" className="c-space section-spacing">
       {/* Projects */}
       <h2 className="text-heading">Projects</h2>
       <div className="gap-x-8 gap-y-12 mt-12 grid grid-cols-1 md:grid-cols-2">
@@ -70,9 +76,18 @@ const Projects = () => {
               <p className="subtext">{project.description}</p>
               <div className="flex flex-wrap gap-1">
                 {project.tags.map((tag) => (
-                  <div key={tag.id} className="flex items-center gap-2 bg-black-200 px-3 py-1.5 rounded-lg">
-                    <img src={tag.path} alt={tag.name} className="w-5 h-5 object-contain" />
-                    <span className="hidden lg:flex text-sm text-white-600">{tag.name}</span>
+                  <div
+                    key={tag.id}
+                    className="flex items-center gap-2 bg-black-200 px-3 py-1.5 rounded-lg"
+                  >
+                    <img
+                      src={tag.path}
+                      alt={tag.name}
+                      className="w-5 h-5 object-contain"
+                    />
+                    <span className="hidden lg:flex text-sm text-white-600">
+                      {tag.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -106,7 +121,7 @@ const Projects = () => {
       </div>
       {/* Gallery */}
       {selectedGallery && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
           onClick={closeGallery}
         >
@@ -116,7 +131,7 @@ const Projects = () => {
           >
             <MdClose size={32} />
           </button>
-          <div 
+          <div
             className="relative max-w-5xl w-full"
             onClick={(e) => e.stopPropagation()}
           >
@@ -145,9 +160,9 @@ const Projects = () => {
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
                       className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                        index === currentImageIndex 
-                          ? 'bg-cyan-400 w-8' 
-                          : 'bg-white/50 hover:bg-white/80'
+                        index === currentImageIndex
+                          ? "bg-cyan-400 w-8"
+                          : "bg-white/50 hover:bg-white/80"
                       }`}
                     />
                   ))}

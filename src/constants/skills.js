@@ -38,7 +38,7 @@ export const programmingLanguages = [
     id: 8,
     name: "Elixir",
     img: "/assets/logos/elixir.png",
-  }
+  },
 ];
 
 export const frontend = [
@@ -96,7 +96,7 @@ export const frontend = [
     id: 11,
     name: "Motion",
     img: "/assets/logos/figma.png",
-  }
+  },
 ];
 
 export const backend = [
@@ -149,7 +149,7 @@ export const backend = [
     id: 10,
     name: "MongoDB",
     img: "/assets/logos/mongodb.svg",
-  }
+  },
 ];
 
 export const others = [
@@ -208,5 +208,4 @@ export const others = [
     name: "ANTLR",
     img: "/assets/logos/antlr.png",
   },
-
 ];

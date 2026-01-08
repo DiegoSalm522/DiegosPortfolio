@@ -1,5 +1,10 @@
 import Marquee from "../components/Marquee";
-import { programmingLanguages, frontend, backend, others } from "../constants/skills";
+import {
+  programmingLanguages,
+  frontend,
+  backend,
+  others,
+} from "../constants/skills";
 import SkillCard from "../components/SkillCard";
 
 const Skills = () => {
@@ -58,6 +63,6 @@ const Skills = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Skills;
