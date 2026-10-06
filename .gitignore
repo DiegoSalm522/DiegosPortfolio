@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Claude Code (personal settings)
-.claude/settings.local.json
+# Claude Code (local tool settings)
+.claude/
