@@ -1,6 +1,20 @@
 import { FlipWords } from "../components/FlipWords";
 
+const BIRTH_DATE = new Date("2003-05-22T00:00:00");
+
+const getAge = (birthDate) => {
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const hasHadBirthdayThisYear =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() &&
+      today.getDate() >= birthDate.getDate());
+  if (!hasHadBirthdayThisYear) age--;
+  return age;
+};
+
 const Hero = () => {
+  const age = getAge(BIRTH_DATE);
   return (
     <section
       id="hero"
@@ -20,7 +34,7 @@ const Hero = () => {
               <FlipWords
                 words={[
                   "Hi! Welcome to my personal portfolio",
-                  "I am a 22 y/o software engineer",
+                  `I am a ${age} y/o software engineer`,
                   "Scroll down to explore some of my featured projects",
                   "Feel free to reach out if you'd like to collaborate!",
                 ]}
