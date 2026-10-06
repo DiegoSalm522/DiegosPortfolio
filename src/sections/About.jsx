@@ -19,11 +19,7 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Diego</p>
             <p className="text-neutral-200 text-sm md:text-base text-pretty">
-              I am a Software Developer with strong experience in Frontend
-              Development (React, JavaScript/TypeScript, HTML5, and CSS3).
-              Skilled in designing responsive, accessible, and high-performance
-              interfaces, integrating APIs, and collaborating in Agile teams
-              while applying UI/UX best practices.
+              I am a Software Developer with professional experience in Frontend Development (React, JavaScript/TypeScript, Next.js, HTML5, CSS3 and Material UI). Skilled in designing responsive, accessible, and high-performance interfaces, integrating APIs, and collaborating in Agile teams while applying UI/UX best practices.
             </p>
           </div>
         </div>
