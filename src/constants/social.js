@@ -11,7 +11,7 @@ export const mySocials = [
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/diegosalm522/profilecard/?igsh=NWZramFpZGZwbjZw",
+    href: "https://www.instagram.com/diegosalm522?igsh=NWZramFpZGZwbjZw",
     icon: "/assets/socials/instagram.svg",
   },
 ];
