@@ -1,8 +1,8 @@
 # 🚀 Diego’s Portfolio
 
-A responsive and modern personal portfolio website showcasing my software development projects, technical skills, and professional journey.
+A responsive and modern personal portfolio website showcasing my software development projects, technical skills and professional journey.
 
-✨ Features smooth animations, clean UI components, and dynamic project showcases with images, brief descriptions, and links to live demos and source code.
+✨ Features smooth animations, clean UI components and dynamic project showcases with images, brief descriptions and links to live demos and source code.
 
 ## 🧠 Main Sections
 - 🏠 Hero — Welcome section with a personal introduction
@@ -18,4 +18,4 @@ A responsive and modern personal portfolio website showcasing my software develo
 - 🎨 Tailwind CSS
 
 ## 💼 Let’s Connect!
-Feel free to explore the portfolio and reach out — I’m always open to new opportunities, collaborations, and creative projects! 🌟
+Feel free to explore the portfolio and reach out — I’m always open to new opportunities, collaborations and creative projects! 🌟

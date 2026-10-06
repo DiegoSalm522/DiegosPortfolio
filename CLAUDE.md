@@ -29,7 +29,7 @@ There is no test suite. Verify changes with `npm run lint` and `npm run build`, 
 
 ## Styling
 
-- Tailwind v4 is wired through the `@tailwindcss/vite` plugin. Configuration is CSS-first: theme tokens (custom colors like `primary`, `midnight`, `aqua`…, and the marquee/orbit animations) are defined in the `@theme` block of `src/index.css`. `tailwind.config.js` is a v3-style leftover and is **not** loaded — put theme changes in `index.css`.
+- Tailwind v4 is wired through the `@tailwindcss/vite` plugin. Configuration is CSS-first: theme tokens (custom colors like `primary`, `midnight`, `aqua`… and the marquee/orbit animations) are defined in the `@theme` block of `src/index.css`. `tailwind.config.js` is a v3-style leftover and is **not** loaded — put theme changes in `index.css`.
 - `src/index.css` also defines shared semantic classes via `@apply` that sections rely on: `c-space` (horizontal padding), `section-spacing`, `text-heading`, `subtext-heading`, `headtext`, `subtext`, `hover-animation`, `nav-*`, `grid-1…grid-5` + `gridN-color` (About bento grid), `field-label`/`field-input` (contact form). Reuse these rather than duplicating utility strings.
 - Use `twMerge` from `tailwind-merge` when a component accepts a `className` prop to merge with its defaults.
 

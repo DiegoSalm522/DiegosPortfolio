@@ -41,7 +41,7 @@ export const projects = [
     id: 2,
     title: "Phone Planet",
     description:
-      "E-commerce web application for a cellphone store featuring 8 brands, 180+ products, and 800+ variants.",
+      "E-commerce web application for a cellphone store featuring 8 brands, 180+ products and 800+ variants.",
     demo: "https://phone-planet.vercel.app/",
     repository: "https://github.com/DiegoSalm522/PhonePlanet",
     image: "/assets/projects/phone-planet/img0.jpg",
@@ -220,7 +220,7 @@ export const projects = [
     id: 6,
     title: "Expoingenierias Web Platform",
     description:
-      "Web platform developed for managing the engineering projects exhibition at my university, including project registration, evaluation, and administration.",
+      "Web platform developed for managing the engineering projects exhibition at my university, including project registration, evaluation and administration.",
     repository: "https://github.com/RogerHdzC/TC2005B",
     image: "/assets/projects/expo-ingenierias/img0.jpg",
     gallery: [
@@ -384,7 +384,7 @@ export const projects = [
     id: 10,
     title: "Little Duck Compiler",
     description:
-      "Compiler for the mini-imperative language Little Duck, implementing lexical, syntactic, and semantic analysis phases.",
+      "Compiler for the mini-imperative language Little Duck, implementing lexical, syntactic and semantic analysis phases.",
     repository: "https://github.com/DiegoSalm522/Proyecto-Patito",
     image: "/assets/projects/compiler/img0.jpg",
     gallery: ["/assets/projects/compiler/img0.jpg"],
