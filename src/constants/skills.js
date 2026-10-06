@@ -59,53 +59,53 @@ export const frontend = [
   },
   {
     id: 4,
-    name: "React Hook Form",
-    img: "/assets/logos/reacthookform.png",
-  },
-  {
-    id: 5,
-    name: "Zod",
-    img: "/assets/logos/zod.png",
-  },
-  {
-    id: 6,
     name: "HTML",
     img: "/assets/logos/html.png",
   },
   {
-    id: 7,
+    id: 5,
     name: "CSS",
     img: "/assets/logos/css.png",
   },
   {
-    id: 8,
-    name: "Tailwind",
+    id: 6,
+    name: "Tailwind CSS",
     img: "/assets/logos/tailwind.png",
   },
   {
-    id: 9,
-    name: "Bootstrap",
-    img: "/assets/logos/bootstrap.png",
-  },
-  {
-    id: 10,
+    id: 7,
     name: "Material UI",
     img: "/assets/logos/materialui.svg",
   },
   {
+    id: 8,
+    name: "Bootstrap",
+    img: "/assets/logos/bootstrap.png",
+  },
+  {
+    id: 9,
+    name: "React Hook Form",
+    img: "/assets/logos/reacthookform.png",
+  },
+  {
+    id: 10,
+    name: "Zod",
+    img: "/assets/logos/zod.png",
+  },
+  {
     id: 11,
+    name: "Motion",
+    img: "/assets/logos/motion.png",
+  },
+  {
+    id: 12,
     name: "Aceternity UI",
     img: "/assets/logos/aceternity.png",
   },
   {
-    id: 12,
+    id: 13,
     name: "Magic UI",
     img: "/assets/logos/magicui.png",
-  },
-  {
-    id: 13,
-    name: "Motion",
-    img: "/assets/logos/motion.png",
   },
   {
     id: 14,
@@ -132,47 +132,37 @@ export const backend = [
   },
   {
     id: 3,
-    name: "Django",
-    img: "/assets/logos/django.svg",
-  },
-  {
-    id: 4,
-    name: "Postman",
-    img: "/assets/logos/postman.png",
-  },
-  {
-    id: 5,
-    name: "Firebase",
-    img: "/assets/logos/firebase.png",
-  },
-  {
-    id: 6,
     name: "PHP",
     img: "/assets/logos/php.svg",
   },
   {
-    id: 7,
-    name: "MySQL",
-    img: "/assets/logos/mysql.png",
+    id: 4,
+    name: "Firebase",
+    img: "/assets/logos/firebase.png",
   },
   {
-    id: 8,
+    id: 5,
     name: "PostgreSQL",
     img: "/assets/logos/postgresql.png",
   },
   {
-    id: 9,
-    name: "SQL",
-    img: "/assets/logos/sql.png",
+    id: 6,
+    name: "MySQL",
+    img: "/assets/logos/mysql.png",
   },
   {
-    id: 10,
+    id: 7,
     name: "MongoDB",
     img: "/assets/logos/mongodb.svg",
   },
+  {
+    id: 8,
+    name: "SQL",
+    img: "/assets/logos/sql.png",
+  },
 ];
 
-export const others = [
+export const devopsTools = [
   {
     id: 1,
     name: "Git",
@@ -190,13 +180,66 @@ export const others = [
   },
   {
     id: 4,
+    name: "Docker",
+    img: "/assets/logos/docker.png",
+  },
+  {
+    id: 5,
+    name: "Google Cloud",
+    img: "/assets/logos/googlecloud.png",
+  },
+  {
+    id: 6,
+    name: "Vercel",
+    img: "/assets/logos/vercel.svg",
+  },
+  {
+    id: 7,
+    name: "Render",
+    img: "/assets/logos/render.png",
+  },
+  {
+    id: 8,
+    name: "Postman",
+    img: "/assets/logos/postman.png",
+  },
+  {
+    id: 9,
+    name: "Hoppscotch",
+    img: "/assets/logos/hoppscotch.png",
+  },
+  {
+    id: 10,
+    name: "Jira",
+    img: "/assets/logos/jira.svg",
+  },
+];
+
+export const aiTools = [
+  {
+    id: 1,
+    name: "ChatGPT",
+    img: "/assets/logos/chatgpt.png",
+  },
+  {
+    id: 2,
     name: "Claude Code",
     img: "/assets/logos/claude.svg",
   },
   {
-    id: 5,
+    id: 3,
     name: "Cursor",
     img: "/assets/logos/cursor.png",
+  },
+  {
+    id: 4,
+    name: "DeepSeek",
+    img: "/assets/logos/deepseek.png",
+  },
+  {
+    id: 5,
+    name: "Gemini",
+    img: "/assets/logos/gemini.png",
   },
   {
     id: 6,
@@ -208,48 +251,46 @@ export const others = [
     name: "OpenClaw",
     img: "/assets/logos/openclaw.png",
   },
+];
+
+export const others = [
   {
-    id: 8,
-    name: "Jira",
-    img: "/assets/logos/jira.svg",
-  },
-  {
-    id: 9,
+    id: 1,
     name: "Android Studio",
     img: "/assets/logos/androidstudio.png",
   },
   {
-    id: 10,
+    id: 2,
     name: "Xcode",
     img: "/assets/logos/xcode.png",
   },
   {
-    id: 11,
+    id: 3,
     name: "Unity",
     img: "/assets/logos/unity.png",
   },
   {
-    id: 12,
+    id: 4,
     name: "Photon",
     img: "/assets/logos/photon.png",
   },
   {
-    id: 13,
+    id: 5,
     name: "OpenGL",
     img: "/assets/logos/opengl.png",
   },
   {
-    id: 14,
+    id: 6,
     name: "Freeglut",
     img: "/assets/logos/freeglut.png",
   },
   {
-    id: 15,
+    id: 7,
     name: "Blender",
     img: "/assets/logos/blender.png",
   },
   {
-    id: 16,
+    id: 8,
     name: "ANTLR",
     img: "/assets/logos/antlr.png",
   },

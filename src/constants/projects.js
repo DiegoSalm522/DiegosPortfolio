@@ -211,11 +211,6 @@ export const projects = [
       },
       {
         id: 5,
-        name: "Django",
-        path: "/assets/logos/django.svg",
-      },
-      {
-        id: 6,
         name: "Postman",
         path: "/assets/logos/postman.png",
       },
