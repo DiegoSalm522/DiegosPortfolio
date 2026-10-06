@@ -49,52 +49,72 @@ export const frontend = [
   },
   {
     id: 2,
+    name: "Next.js",
+    img: "/assets/logos/nextjs.png",
+  },
+  {
+    id: 3,
     name: "Vite",
     img: "/assets/logos/vite.svg",
   },
   {
-    id: 3,
+    id: 4,
+    name: "React Hook Form",
+    img: "/assets/logos/reacthookform.png",
+  },
+  {
+    id: 5,
+    name: "Zod",
+    img: "/assets/logos/zod.png",
+  },
+  {
+    id: 6,
     name: "HTML",
     img: "/assets/logos/html.png",
   },
   {
-    id: 4,
+    id: 7,
     name: "CSS",
     img: "/assets/logos/css.png",
   },
   {
-    id: 5,
+    id: 8,
     name: "Tailwind",
     img: "/assets/logos/tailwind.png",
   },
   {
-    id: 6,
+    id: 9,
     name: "Bootstrap",
     img: "/assets/logos/bootstrap.png",
   },
   {
-    id: 7,
+    id: 10,
     name: "Material UI",
     img: "/assets/logos/materialui.svg",
   },
   {
-    id: 8,
+    id: 11,
     name: "Aceternity UI",
     img: "/assets/logos/aceternity.png",
   },
   {
-    id: 9,
+    id: 12,
     name: "Magic UI",
     img: "/assets/logos/magicui.png",
   },
   {
-    id: 10,
+    id: 13,
     name: "Motion",
     img: "/assets/logos/motion.png",
   },
   {
-    id: 11,
-    name: "Motion",
+    id: 14,
+    name: "Storybook",
+    img: "/assets/logos/storybook.png",
+  },
+  {
+    id: 15,
+    name: "Figma",
     img: "/assets/logos/figma.png",
   },
 ];
