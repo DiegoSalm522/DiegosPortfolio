@@ -7,13 +7,13 @@ const Experience = () => {
     active: experience.current,
     title: (
       <div className="font-bold">
-        <p className="text-3xl md:text-4xl text-zinc-200">
+        <p className="text-3xl md:text-4-xl text-aqua">
           {experience.period}
         </p>
-        <p className="mt-1 text-2xl md:text-3xl text-zinc-400">
+        <p className="mt-2 text-2xl md:text-3xl text-zinc-200">
           {experience.role}
         </p>
-        <p className="text-2xl md:text-3xl text-zinc-500">
+        <p className="mt-1 text-2xl md:text-3xl text-zinc-400">
           {experience.company}
         </p>
         {experience.logo && (

@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     title: "Diego's Portfolio",
     description:
-      "Personal portfolio website showcasing software development projects and skills.",
+      "Personal portfolio website showcasing my work experience, software development projects and skills.",
     demo: "https://diegosalmones-portfolio.vercel.app/",
     repository: "https://github.com/DiegoSalm522/DiegosPortfolio",
     image: "/assets/projects/diegos-portfolio/img0.jpg",
@@ -13,6 +13,7 @@ export const projects = [
       "/assets/projects/diegos-portfolio/img2.jpg",
       "/assets/projects/diegos-portfolio/img3.jpg",
       "/assets/projects/diegos-portfolio/img4.jpg",
+      "/assets/projects/diegos-portfolio/img5.jpg",
     ],
     tags: [
       {

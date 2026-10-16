@@ -1,7 +1,7 @@
 export const experiences = [
   {
     id: 1,
-    period: "2026 - Present",
+    period: "Jan 2026 - Present",
     role: "Frontend Developer",
     company: "OTIF",
     logo: "/assets/experience/otif.svg",
