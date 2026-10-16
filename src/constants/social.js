@@ -2,12 +2,12 @@ export const mySocials = [
   {
     name: "Github",
     href: "https://github.com/DiegoSalm522",
-    icon: "/assets/logos/github.webp",
+    icon: "/assets/socials/github.svg",
   },
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/diego-g-salmones/",
-    icon: "/assets/socials/linkedIn.svg",
+    icon: "/assets/socials/linkedin.svg",
   },
   {
     name: "Instagram",

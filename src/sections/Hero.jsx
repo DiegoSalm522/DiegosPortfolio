@@ -60,7 +60,7 @@ const Hero = () => {
           <div
             className="absolute inset-0 w-full h-screen -z-10"
             style={{
-              backgroundImage: "url(/assets/hero/paint2.webp)",
+              backgroundImage: "url(/assets/hero/background.webp)",
               backgroundPosition: "bottom",
               backgroundSize: "cover",
             }}

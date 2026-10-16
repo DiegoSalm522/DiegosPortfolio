@@ -2,42 +2,42 @@ export const programmingLanguages = [
   {
     id: 1,
     name: "Javascript",
-    img: "/assets/logos/javascript.webp",
+    img: "/assets/tech/javascript.webp",
   },
   {
     id: 2,
     name: "Typescript",
-    img: "/assets/logos/typescript.webp",
+    img: "/assets/tech/typescript.webp",
   },
   {
     id: 3,
     name: "Python",
-    img: "/assets/logos/python.webp",
+    img: "/assets/tech/python.webp",
   },
   {
     id: 4,
     name: "C++",
-    img: "/assets/logos/c++.webp",
+    img: "/assets/tech/cpp.webp",
   },
   {
     id: 5,
     name: "C#",
-    img: "/assets/logos/csharp.webp",
+    img: "/assets/tech/csharp.webp",
   },
   {
     id: 6,
     name: "Java",
-    img: "/assets/logos/java.webp",
+    img: "/assets/tech/java.webp",
   },
   {
     id: 7,
     name: "Swift",
-    img: "/assets/logos/swift.webp",
+    img: "/assets/tech/swift.webp",
   },
   {
     id: 8,
     name: "Elixir",
-    img: "/assets/logos/elixir.webp",
+    img: "/assets/tech/elixir.webp",
   },
 ];
 
@@ -45,77 +45,77 @@ export const frontend = [
   {
     id: 1,
     name: "React",
-    img: "/assets/logos/react.webp",
+    img: "/assets/tech/react.webp",
   },
   {
     id: 2,
     name: "Next.js",
-    img: "/assets/logos/nextjs.webp",
+    img: "/assets/tech/nextjs.webp",
   },
   {
     id: 3,
     name: "Vite",
-    img: "/assets/logos/vite.svg",
+    img: "/assets/tech/vite.svg",
   },
   {
     id: 4,
     name: "HTML",
-    img: "/assets/logos/html.webp",
+    img: "/assets/tech/html.webp",
   },
   {
     id: 5,
     name: "CSS",
-    img: "/assets/logos/css.webp",
+    img: "/assets/tech/css.webp",
   },
   {
     id: 6,
     name: "Tailwind CSS",
-    img: "/assets/logos/tailwind.webp",
+    img: "/assets/tech/tailwind.webp",
   },
   {
     id: 7,
     name: "Material UI",
-    img: "/assets/logos/materialui.svg",
+    img: "/assets/tech/materialui.svg",
   },
   {
     id: 8,
     name: "Bootstrap",
-    img: "/assets/logos/bootstrap.webp",
+    img: "/assets/tech/bootstrap.webp",
   },
   {
     id: 9,
     name: "React Hook Form",
-    img: "/assets/logos/reacthookform.webp",
+    img: "/assets/tech/reacthookform.webp",
   },
   {
     id: 10,
     name: "Zod",
-    img: "/assets/logos/zod.webp",
+    img: "/assets/tech/zod.webp",
   },
   {
     id: 11,
     name: "Motion",
-    img: "/assets/logos/motion.webp",
+    img: "/assets/tech/motion.webp",
   },
   {
     id: 12,
     name: "Aceternity UI",
-    img: "/assets/logos/aceternity.webp",
+    img: "/assets/tech/aceternity.webp",
   },
   {
     id: 13,
     name: "Magic UI",
-    img: "/assets/logos/magicui.webp",
+    img: "/assets/tech/magicui.webp",
   },
   {
     id: 14,
     name: "Storybook",
-    img: "/assets/logos/storybook.webp",
+    img: "/assets/tech/storybook.webp",
   },
   {
     id: 15,
     name: "Figma",
-    img: "/assets/logos/figma.webp",
+    img: "/assets/tech/figma.webp",
   },
 ];
 
@@ -123,42 +123,42 @@ export const backend = [
   {
     id: 1,
     name: "Node JS",
-    img: "/assets/logos/nodejs.webp",
+    img: "/assets/tech/nodejs.webp",
   },
   {
     id: 2,
     name: "Express JS",
-    img: "/assets/logos/expressjs.webp",
+    img: "/assets/tech/expressjs.webp",
   },
   {
     id: 3,
     name: "PHP",
-    img: "/assets/logos/php.svg",
+    img: "/assets/tech/php.svg",
   },
   {
     id: 4,
     name: "Firebase",
-    img: "/assets/logos/firebase.webp",
+    img: "/assets/tech/firebase.webp",
   },
   {
     id: 5,
     name: "PostgreSQL",
-    img: "/assets/logos/postgresql.webp",
+    img: "/assets/tech/postgresql.webp",
   },
   {
     id: 6,
     name: "MySQL",
-    img: "/assets/logos/mysql.webp",
+    img: "/assets/tech/mysql.webp",
   },
   {
     id: 7,
     name: "MongoDB",
-    img: "/assets/logos/mongodb.svg",
+    img: "/assets/tech/mongodb.svg",
   },
   {
     id: 8,
     name: "SQL",
-    img: "/assets/logos/sql.webp",
+    img: "/assets/tech/sql.webp",
   },
 ];
 
@@ -166,52 +166,52 @@ export const devopsTools = [
   {
     id: 1,
     name: "Git",
-    img: "/assets/logos/git.webp",
+    img: "/assets/tech/git.webp",
   },
   {
     id: 2,
     name: "GitHub",
-    img: "/assets/logos/github.webp",
+    img: "/assets/tech/github.webp",
   },
   {
     id: 3,
     name: "Gitea",
-    img: "/assets/logos/gitea.webp",
+    img: "/assets/tech/gitea.webp",
   },
   {
     id: 4,
     name: "Docker",
-    img: "/assets/logos/docker.webp",
+    img: "/assets/tech/docker.webp",
   },
   {
     id: 5,
     name: "Google Cloud",
-    img: "/assets/logos/googlecloud.webp",
+    img: "/assets/tech/googlecloud.webp",
   },
   {
     id: 6,
     name: "Vercel",
-    img: "/assets/logos/vercel.svg",
+    img: "/assets/tech/vercel.svg",
   },
   {
     id: 7,
     name: "Render",
-    img: "/assets/logos/render.webp",
+    img: "/assets/tech/render.webp",
   },
   {
     id: 8,
     name: "Postman",
-    img: "/assets/logos/postman.webp",
+    img: "/assets/tech/postman.webp",
   },
   {
     id: 9,
     name: "Hoppscotch",
-    img: "/assets/logos/hoppscotch.webp",
+    img: "/assets/tech/hoppscotch.webp",
   },
   {
     id: 10,
     name: "Jira",
-    img: "/assets/logos/jira.svg",
+    img: "/assets/tech/jira.svg",
   },
 ];
 
@@ -219,37 +219,37 @@ export const aiTools = [
   {
     id: 1,
     name: "ChatGPT",
-    img: "/assets/logos/chatgpt.webp",
+    img: "/assets/tech/chatgpt.webp",
   },
   {
     id: 2,
     name: "Claude Code",
-    img: "/assets/logos/claude.svg",
+    img: "/assets/tech/claude.svg",
   },
   {
     id: 3,
     name: "Cursor",
-    img: "/assets/logos/cursor.webp",
+    img: "/assets/tech/cursor.webp",
   },
   {
     id: 4,
     name: "DeepSeek",
-    img: "/assets/logos/deepseek.webp",
+    img: "/assets/tech/deepseek.webp",
   },
   {
     id: 5,
     name: "Gemini",
-    img: "/assets/logos/gemini.webp",
+    img: "/assets/tech/gemini.webp",
   },
   {
     id: 6,
     name: "GitHub Copilot",
-    img: "/assets/logos/githubcopilot.webp",
+    img: "/assets/tech/githubcopilot.webp",
   },
   {
     id: 7,
     name: "OpenClaw",
-    img: "/assets/logos/openclaw.webp",
+    img: "/assets/tech/openclaw.webp",
   },
 ];
 
@@ -257,41 +257,41 @@ export const others = [
   {
     id: 1,
     name: "Android Studio",
-    img: "/assets/logos/androidstudio.webp",
+    img: "/assets/tech/androidstudio.webp",
   },
   {
     id: 2,
     name: "Xcode",
-    img: "/assets/logos/xcode.webp",
+    img: "/assets/tech/xcode.webp",
   },
   {
     id: 3,
     name: "Unity",
-    img: "/assets/logos/unity.webp",
+    img: "/assets/tech/unity.webp",
   },
   {
     id: 4,
     name: "Photon",
-    img: "/assets/logos/photon.webp",
+    img: "/assets/tech/photon.webp",
   },
   {
     id: 5,
     name: "OpenGL",
-    img: "/assets/logos/opengl.webp",
+    img: "/assets/tech/opengl.webp",
   },
   {
     id: 6,
     name: "Freeglut",
-    img: "/assets/logos/freeglut.webp",
+    img: "/assets/tech/freeglut.webp",
   },
   {
     id: 7,
     name: "Blender",
-    img: "/assets/logos/blender.webp",
+    img: "/assets/tech/blender.webp",
   },
   {
     id: 8,
     name: "ANTLR",
-    img: "/assets/logos/antlr.webp",
+    img: "/assets/tech/antlr.webp",
   },
 ];
