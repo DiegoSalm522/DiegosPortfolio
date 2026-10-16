@@ -29,8 +29,8 @@ const Timeline = ({ data }) => {
           key={item.id}
           className="flex justify-start pt-10 md:pt-20 md:gap-10"
         >
-          {/* Sticky title */}
-          <div className="sticky z-10 flex flex-col self-start max-w-xs top-40 md:flex-row lg:max-w-sm md:w-full">
+          {/* Title */}
+          <div className="relative z-10 flex flex-col self-start max-w-xs md:flex-row lg:max-w-sm md:w-full">
             <div className="absolute flex items-center justify-center w-10 h-10 rounded-full left-3 bg-[#090909]">
               <div
                 className={`w-4 h-4 p-2 border rounded-full ${

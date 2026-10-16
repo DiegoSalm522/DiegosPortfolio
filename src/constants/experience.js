@@ -4,6 +4,7 @@ export const experiences = [
     period: "2026 - Present",
     role: "Frontend Developer",
     company: "OTIF",
+    logo: "/assets/experience/otif.svg",
     current: true,
     description: [
       {

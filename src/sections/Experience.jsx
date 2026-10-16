@@ -16,6 +16,13 @@ const Experience = () => {
         <p className="text-2xl md:text-3xl text-neutral-500">
           {experience.company}
         </p>
+        {experience.logo && (
+          <img
+            src={experience.logo}
+            alt={`${experience.company} logo`}
+            className="object-contain w-40 h-40 mx-auto mt-6 md:w-60 md:h-60"
+          />
+        )}
       </div>
     ),
     content: (
