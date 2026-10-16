@@ -17,8 +17,9 @@ function Navigation({ closeMenu }) {
         hero: 1,
         about: 2,
         skills: 3,
-        projects: 4,
-        contact: 5,
+        experience: 4,
+        projects: 5,
+        contact: 6,
       };
       const index = sectionMap[sectionId];
       if (index && sections[index]) {
@@ -69,6 +70,15 @@ function Navigation({ closeMenu }) {
           onClick={(e) => handleNavClick("skills", e)}
         >
           Skills
+        </a>
+      </li>
+      <li className="nav-li">
+        <a
+          href="#experience"
+          className="nav-link"
+          onClick={(e) => handleNavClick("experience", e)}
+        >
+          Experience
         </a>
       </li>
       <li className="nav-li">

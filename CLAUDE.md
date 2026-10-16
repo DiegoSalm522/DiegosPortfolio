@@ -19,13 +19,13 @@ There is no test suite. Verify changes with `npm run lint` and `npm run build`, 
 
 ## Architecture
 
-- `src/App.jsx` stacks the page sections in order: Navbar → Hero → About → Skills → Projects → Contact → Footer. Each lives in `src/sections/`; reusable/animated pieces live in `src/components/`.
-- **Content is data-driven.** Projects, skills and social links are arrays in `src/constants/` (`projects.js`, `skills.js`, `social.js`) and the sections just map over them. Editing portfolio content usually means editing these files, not the JSX.
+- `src/App.jsx` stacks the page sections in order: Navbar → Hero → About → Skills → Experience → Projects → Contact → Footer. Each lives in `src/sections/`; reusable/animated pieces live in `src/components/`.
+- **Content is data-driven.** Projects, work experience, skills and social links are arrays in `src/constants/` (`projects.js`, `experience.js`, `skills.js`, `social.js`) and the sections just map over them. Editing portfolio content usually means editing these files, not the JSX.
 - **Static assets** live in `public/assets/` and are referenced by absolute paths (`/assets/...`). Project images follow `public/assets/projects/<slug>/img0.jpg … imgN.jpg`; `image` is the card thumbnail and `gallery` feeds the lightbox in `Projects.jsx`. `demo` and `repository` are optional — a falsy value hides that button.
 - **Resume download** points at `public/assets/files/DiegoGSA_Resume.pdf` (hardcoded in `src/components/Download.jsx`). To update the resume, replace the file keeping the same name.
-- **Navigation:** sections have `id`s (`hero`, `about`, `skills`, `projects`, `contact`). `Navbar.jsx` intercepts link clicks and smooth-scrolls with a fixed 70px navbar offset. New sections need an `id` and a matching nav entry.
+- **Navigation:** sections have `id`s (`hero`, `about`, `skills`, `experience`, `projects`, `contact`). `Navbar.jsx` intercepts link clicks and smooth-scrolls with a fixed 70px navbar offset. New sections need an `id` and a matching nav entry.
 - **Contact form** sends mail client-side via EmailJS (`@emailjs/browser`); service ID, template ID and public key are inline in `src/sections/Contact.jsx`. There is no backend. `@emailjs/browser` is excluded from Vite's `optimizeDeps`.
-- **Animations** use `motion` (import from `"motion/react"`). Several components (`FlipWords`, `Marquee`, `Particles`) are adapted from Aceternity UI / Magic UI snippets, which is why some still carry a `"use client"` directive (harmless in Vite).
+- **Animations** use `motion` (import from `"motion/react"`). Several components (`FlipWords`, `Marquee`, `Particles`, `Timeline`) are adapted from Aceternity UI / Magic UI snippets, which is why some still carry a `"use client"` directive (harmless in Vite).
 
 ## Styling
 

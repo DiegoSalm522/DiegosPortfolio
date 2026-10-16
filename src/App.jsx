@@ -1,6 +1,7 @@
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
+import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
@@ -13,6 +14,7 @@ const App = () => {
       <Hero />
       <About />
       <Skills />
+      <Experience />
       <Projects />
       <Contact />
       <Footer />
