@@ -156,7 +156,6 @@ const Projects = () => {
               onDragEnd={handleSwipe}
             />
             {selectedGallery.length > 1 && (
-              // Mobile: controls bar below the image. Desktop: overlaid on the image.
               <div className="mt-4 flex items-center justify-between gap-2 md:contents">
                 <button
                   onClick={prevImage}

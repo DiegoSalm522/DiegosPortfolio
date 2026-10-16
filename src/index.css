@@ -1,11 +1,10 @@
 @import "tailwindcss";
 @theme {
-  /* Palette: blacks/grays come from Tailwind's `zinc` (cool gray) scale; blues below */
-  --color-primary: #090909; /* page background */
-  --color-abyss: #1d2a35; /* darkest blue, gradient stops */
-  --color-ocean: #0d5e8b; /* main blue: chips, borders */
-  --color-lagoon: #0092b8; /* mid cyan: buttons */
-  --color-aqua: #4ac0de; /* light cyan: highlights, active states */
+  --color-primary: #090909;
+  --color-abyss: #1d2a35;
+  --color-ocean: #0d5e8b;
+  --color-lagoon: #0092b8;
+  --color-aqua: #4ac0de;
   --animate-orbit: orbit 50s linear infinite;
   --animate-marquee: marquee 50s linear infinite;
   --animate-marquee-vertical: marquee-vertical 50s linear infinite;

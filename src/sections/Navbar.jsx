@@ -29,7 +29,6 @@ function Navigation({ closeMenu }) {
     if (closeMenu) {
       closeMenu();
     }
-    // Scroll on the next frame so the mobile menu's scroll lock is released first
     requestAnimationFrame(() => {
       if (sectionId === "hero") {
         window.scrollTo({
@@ -112,7 +111,6 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  // Lock page scroll while the full-screen mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {

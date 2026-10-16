@@ -68,7 +68,6 @@ export const Particles = ({
     }
     initCanvas();
 
-    // Only animate while the canvas is on screen
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         if (rafID.current == null) animate();
@@ -84,8 +83,6 @@ export const Particles = ({
         clearTimeout(resizeTimeout.current);
       }
       resizeTimeout.current = setTimeout(() => {
-        // Mobile browsers fire resize when the address bar shows/hides;
-        // skip re-init unless the container size actually changed
         const container = canvasContainerRef.current;
         if (
           container &&
@@ -151,7 +148,6 @@ export const Particles = ({
       canvasRef.current.style.height = `${canvasSize.current.h}px`;
       context.current.scale(dpr, dpr);
 
-      // Clear existing particles; drawParticles() creates the new set
       circles.current = [];
     }
   };
@@ -228,12 +224,11 @@ export const Particles = ({
   const animate = () => {
     clearContext();
     circles.current.forEach((circle, i) => {
-      // Handle the alpha value
       const edge = [
-        circle.x + circle.translateX - circle.size, // distance from left edge
-        canvasSize.current.w - circle.x - circle.translateX - circle.size, // distance from right edge
-        circle.y + circle.translateY - circle.size, // distance from top edge
-        canvasSize.current.h - circle.y - circle.translateY - circle.size, // distance from bottom edge
+        circle.x + circle.translateX - circle.size,
+        canvasSize.current.w - circle.x - circle.translateX - circle.size,
+        circle.y + circle.translateY - circle.size,
+        canvasSize.current.h - circle.y - circle.translateY - circle.size,
       ];
       const closestEdge = edge.reduce((a, b) => Math.min(a, b));
       const remapClosestEdge = parseFloat(
@@ -258,16 +253,13 @@ export const Particles = ({
 
       drawCircle(circle, true);
 
-      // circle gets out of the canvas
       if (
         circle.x < -circle.size ||
         circle.x > canvasSize.current.w + circle.size ||
         circle.y < -circle.size ||
         circle.y > canvasSize.current.h + circle.size
       ) {
-        // remove the circle from the array
         circles.current.splice(i, 1);
-        // create a new circle
         const newCircle = circleParams();
         drawCircle(newCircle);
       }

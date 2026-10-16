@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { AnimatePresence } from "motion/react";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 
@@ -32,7 +33,6 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      console.log("Form submitted:", formData);
       await emailjs.send(
         "service_yxu9crj",
         "template_b4fnp0n",
@@ -48,9 +48,8 @@ const Contact = () => {
       setIsLoading(false);
       showAlertMessage("success", "Your message has been sent");
       setformData({ name: "", email: "", message: "" });
-    } catch (error) {
+    } catch {
       setIsLoading(false);
-      console.log(error);
       showAlertMessage("danger", "Something went wrong");
     }
   };
@@ -67,7 +66,9 @@ const Contact = () => {
         color={"#ffffff"}
         refresh
       />
-      {showAlert && <Alert type={alertType} text={alertMessage} />}
+      <AnimatePresence>
+        {showAlert && <Alert type={alertType} text={alertMessage} />}
+      </AnimatePresence>
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-zinc-900">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Contact Me</h2>
