@@ -122,7 +122,7 @@ const Contact = () => {
               required
             />
           </div>
-          <button className="w-full px-1 py-3 text-[18px] text-center rounded-md cursor-pointer bg-lagoon hover-animation">
+          <button className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-lagoon hover-animation">
             {!isLoading ? "Send" : "Sending..."}
           </button>
         </form>

@@ -18,7 +18,7 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/20"></div>
           <div className="z-10">
             <p className="headtext">Hi, I'm Diego</p>
-            <p className="text-zinc-200 text-sm md:text-base text-pretty">
+            <p className="subtext">
               I am a Software Developer with professional experience in Frontend Development (React, JavaScript/TypeScript, Next.js, HTML5, CSS3 and Material UI). Skilled in designing responsive, accessible and high-performance interfaces, integrating APIs and collaborating in Agile teams while applying UI/UX best practices.
             </p>
           </div>
@@ -110,7 +110,7 @@ const About = () => {
               src="assets/about/tec-logo.svg"
               className="w-30 h-30 md:w-24 md:h-24 lg:w-32 lg:h-32 object-contain my-2 mt"
             />
-            <p className="text-center text-black text-sm sm:text-base">
+            <p className="text-center text-black text-sm md:text-base">
               B.S. in Computer Science and Technology @ ITESM (2021-2025)
             </p>
           </div>

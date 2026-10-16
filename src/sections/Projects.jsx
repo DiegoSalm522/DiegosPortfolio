@@ -72,7 +72,7 @@ const Projects = () => {
               )}
             </div>
             <div className="flex-1 px-4 pb-4 flex flex-col gap-3 mb-auto">
-              <p className="headtext font-bold">{project.title}</p>
+              <p className="headtext">{project.title}</p>
               <p className="subtext">{project.description}</p>
               <div className="flex flex-wrap gap-x-4 gap-y-2">
                 {project.tags.map((tag) => (

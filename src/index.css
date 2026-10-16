@@ -58,11 +58,11 @@ body {
 }
 
 .headtext {
-  @apply text-xl;
+  @apply text-xl font-bold;
 }
 
 .subtext {
-  @apply text-zinc-200 text-base text-pretty;
+  @apply text-zinc-200 text-sm md:text-base text-pretty;
 }
 
 /* Navigation */
@@ -76,11 +76,6 @@ body {
 
 .nav-link {
   @apply text-lg md:text-base hover:text-white transition-colors;
-}
-
-/* Button Components */
-.btn {
-  @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
 }
 
 /* About Section */
@@ -131,11 +126,11 @@ body {
 
 /* Contact Section*/
 .field-label {
-  @apply text-[16px] font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+  @apply text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
 }
 
 .field-input {
-  @apply w-full min-h-10 rounded-md px-3 py-2 text-[16px] bg-white/10 transition duration-200 placeholder-zinc-500 border border-white/10 mt-2;
+  @apply w-full min-h-10 rounded-md px-3 py-2 text-base bg-white/10 transition duration-200 placeholder-zinc-500 border border-white/10 mt-2;
 }
 
 .field-input-focus {
