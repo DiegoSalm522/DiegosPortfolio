@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navigation({ closeMenu }) {
   const handleNavClick = (sectionId, event) => {
@@ -26,22 +26,25 @@ function Navigation({ closeMenu }) {
         targetElement = sections[index];
       }
     }
-    if (sectionId === "hero") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    } else if (targetElement) {
-      const navbarHeight = 70;
-      const elementPosition = targetElement.offsetTop - navbarHeight;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: "smooth",
-      });
-    }
     if (closeMenu) {
       closeMenu();
     }
+    // Scroll on the next frame so the mobile menu's scroll lock is released first
+    requestAnimationFrame(() => {
+      if (sectionId === "hero") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      } else if (targetElement) {
+        const navbarHeight = 70;
+        const elementPosition = targetElement.offsetTop - navbarHeight;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: "smooth",
+        });
+      }
+    });
   };
   return (
     <ul className="nav-ul">
@@ -108,9 +111,22 @@ const Navbar = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
+
+  // Lock page scroll while the full-screen mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
-      <div className="mx-auto c-space max-w-7xl">
+    <div
+      className={`fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40 ${
+        isOpen ? "max-sm:flex max-sm:flex-col max-sm:h-svh max-sm:bg-primary/90" : ""
+      }`}
+    >
+      <div className="w-full mx-auto c-space max-w-7xl">
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"
@@ -120,6 +136,7 @@ const Navbar = () => {
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-expanded={isOpen}
             className="flex cursor-pointer text-zinc-400 hover:text-white focus:outline-none sm:hidden"
           >
             {isOpen ? (
@@ -142,14 +159,8 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div
-          className="block overflow-hidden text-center sm:hidden"
-          style={{
-            maxHeight: "100vh",
-            animation: "slideInFromLeft 0.3s ease-out",
-          }}
-        >
-          <nav className="pb-5">
+        <div className="flex flex-1 items-center justify-center overflow-y-auto text-center sm:hidden animate-menu-in">
+          <nav className="w-full pb-16">
             <Navigation closeMenu={closeMenu} />
           </nav>
         </div>

@@ -67,13 +67,33 @@ export const Particles = ({
       context.current = canvasRef.current.getContext("2d");
     }
     initCanvas();
-    animate();
+
+    // Only animate while the canvas is on screen
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        if (rafID.current == null) animate();
+      } else if (rafID.current != null) {
+        window.cancelAnimationFrame(rafID.current);
+        rafID.current = null;
+      }
+    });
+    observer.observe(canvasContainerRef.current);
 
     const handleResize = () => {
       if (resizeTimeout.current) {
         clearTimeout(resizeTimeout.current);
       }
       resizeTimeout.current = setTimeout(() => {
+        // Mobile browsers fire resize when the address bar shows/hides;
+        // skip re-init unless the container size actually changed
+        const container = canvasContainerRef.current;
+        if (
+          container &&
+          container.offsetWidth === canvasSize.current.w &&
+          container.offsetHeight === canvasSize.current.h
+        ) {
+          return;
+        }
         initCanvas();
       }, 200);
     };
@@ -81,8 +101,10 @@ export const Particles = ({
     window.addEventListener("resize", handleResize);
 
     return () => {
+      observer.disconnect();
       if (rafID.current != null) {
         window.cancelAnimationFrame(rafID.current);
+        rafID.current = null;
       }
       if (resizeTimeout.current) {
         clearTimeout(resizeTimeout.current);
@@ -129,12 +151,8 @@ export const Particles = ({
       canvasRef.current.style.height = `${canvasSize.current.h}px`;
       context.current.scale(dpr, dpr);
 
-      // Clear existing particles and create new ones with exact quantity
+      // Clear existing particles; drawParticles() creates the new set
       circles.current = [];
-      for (let i = 0; i < quantity; i++) {
-        const circle = circleParams();
-        drawCircle(circle);
-      }
     }
   };
 

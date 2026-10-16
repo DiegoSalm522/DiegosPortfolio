@@ -20,6 +20,7 @@ const Experience = () => {
           <img
             src={experience.logo}
             alt={`${experience.company} logo`}
+            loading="lazy"
             className="object-contain w-40 h-40 mx-auto mt-6 md:w-60 md:h-60"
           />
         )}

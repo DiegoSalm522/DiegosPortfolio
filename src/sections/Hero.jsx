@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="flex-shrink-0">
           <div className="w-64 h-64 md:mt-10 md:w-100 md:h-100 rounded-full overflow-hidden border-8 border-ocean shadow-2xl">
             <img
-              src="/assets/hero/profile.jpg"
+              src="/assets/hero/profile.webp"
               alt="Diego G. Salmones"
               className="w-full h-full object-cover"
             />
@@ -60,7 +60,7 @@ const Hero = () => {
           <div
             className="absolute inset-0 w-full h-screen -z-10"
             style={{
-              backgroundImage: "url(/assets/hero/paint2.png)",
+              backgroundImage: "url(/assets/hero/paint2.webp)",
               backgroundPosition: "bottom",
               backgroundSize: "cover",
             }}

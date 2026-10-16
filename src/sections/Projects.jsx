@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa";
 import {
   MdOutlineComputer,
@@ -17,10 +18,10 @@ const Projects = () => {
     if (selectedGallery) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
     };
   }, [selectedGallery]);
 
@@ -46,6 +47,11 @@ const Projects = () => {
     );
   };
 
+  const handleSwipe = (_, { offset, velocity }) => {
+    if (offset.x < -50 || velocity.x < -500) nextImage();
+    else if (offset.x > 50 || velocity.x > 500) prevImage();
+  };
+
   return (
     <section id="projects" className="c-space section-spacing">
       {/* Projects */}
@@ -60,11 +66,13 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
                 className="w-full h-auto object-cover rounded-2xl"
               />
               {project.gallery && project.gallery.length > 0 && (
                 <button
                   onClick={() => openGallery(project.gallery)}
+                  aria-label={`Open ${project.title} gallery`}
                   className="absolute top-3 right-3 bg-black/70 hover:bg-black/90 text-white p-2 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm cursor-pointer"
                 >
                   <MdPhoto size={28} />
@@ -83,6 +91,7 @@ const Projects = () => {
                     <img
                       src={tag.path}
                       alt={tag.name}
+                      loading="lazy"
                       className="w-5 h-5 object-contain"
                     />
                     <span className="hidden lg:flex text-sm text-zinc-400">
@@ -127,7 +136,8 @@ const Projects = () => {
         >
           <button
             onClick={closeGallery}
-            className="absolute top-4 right-4 text-white hover:text-aqua transition-colors cursor-pointer"
+            aria-label="Close gallery"
+            className="absolute top-4 right-4 p-1 text-white hover:text-aqua transition-colors cursor-pointer"
           >
             <MdClose size={32} />
           </button>
@@ -135,41 +145,54 @@ const Projects = () => {
             className="relative max-w-5xl w-full"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
+            <motion.img
               src={selectedGallery[currentImageIndex]}
               alt={`Imagen ${currentImageIndex + 1}`}
-              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+              className="w-full h-auto max-h-[70svh] md:max-h-[80svh] object-contain rounded-lg"
+              draggable={false}
+              drag={selectedGallery.length > 1 ? "x" : false}
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.6}
+              onDragEnd={handleSwipe}
             />
             {selectedGallery.length > 1 && (
-              <>
+              // Mobile: controls bar below the image. Desktop: overlaid on the image.
+              <div className="mt-4 flex items-center justify-between gap-2 md:contents">
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 cursor-pointer"
+                  aria-label="Previous image"
+                  className="md:absolute md:left-4 md:top-1/2 md:-translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 cursor-pointer"
                 >
                   <MdChevronLeft size={28} />
                 </button>
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 cursor-pointer"
-                >
-                  <MdChevronRight size={28} />
-                </button>
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="flex flex-wrap justify-center md:absolute md:bottom-4 md:left-1/2 md:-translate-x-1/2">
                   {selectedGallery.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                        index === currentImageIndex
-                          ? "bg-aqua w-8"
-                          : "bg-white/50 hover:bg-white/80"
-                      }`}
-                    />
+                      aria-label={`Go to image ${index + 1}`}
+                      className="flex items-center justify-center h-8 px-1 cursor-pointer group"
+                    >
+                      <span
+                        className={`block h-2 rounded-full transition-all duration-200 ${
+                          index === currentImageIndex
+                            ? "bg-aqua w-8"
+                            : "w-2 bg-white/50 group-hover:bg-white/80"
+                        }`}
+                      />
+                    </button>
                   ))}
                 </div>
-              </>
+                <button
+                  onClick={nextImage}
+                  aria-label="Next image"
+                  className="md:absolute md:right-4 md:top-1/2 md:-translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 cursor-pointer"
+                >
+                  <MdChevronRight size={28} />
+                </button>
+              </div>
             )}
-            <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
+            <div className="fixed top-5 left-4 md:absolute md:top-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
               {currentImageIndex + 1} / {selectedGallery.length}
             </div>
           </div>
