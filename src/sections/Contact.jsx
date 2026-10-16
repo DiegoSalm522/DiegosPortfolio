@@ -68,7 +68,7 @@ const Contact = () => {
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-[#1E1F22]">
+      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-zinc-900">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Contact Me</h2>
         </div>
@@ -122,7 +122,7 @@ const Contact = () => {
               required
             />
           </div>
-          <button className="w-full px-1 py-3 text-[18px] text-center rounded-md cursor-pointer bg-cyan-600 hover-animation">
+          <button className="w-full px-1 py-3 text-[18px] text-center rounded-md cursor-pointer bg-lagoon hover-animation">
             {!isLoading ? "Send" : "Sending..."}
           </button>
         </form>

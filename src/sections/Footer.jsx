@@ -2,8 +2,8 @@ import { mySocials } from "../constants/social";
 
 const Footer = () => {
   return (
-    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
-      <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-zinc-400 c-space">
+      <div className="mb-4 bg-gradient-to-r from-transparent via-zinc-700 to-transparent h-[1px] w-full" />
       <p>© {new Date().getFullYear()} Diego Salmones. All rights reserved.</p>
       <div className="flex gap-3">
         {mySocials.map((social, index) => (

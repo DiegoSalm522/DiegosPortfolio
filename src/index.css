@@ -1,19 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @theme {
-  --color-primary: #030412;
-  --color-midnight: #06091f;
-  --color-navy: #161a31;
-  --color-indigo: #1f1e39;
-  --color-storm: #282b4b;
-  --color-aqua: #33c2cc;
-  --color-mint: #57db96;
-  --color-royal: #5c33cc;
-  --color-lavender: #7a57db;
-  --color-fuchsia: #ca2f8c;
-  --color-orange: #cc6033;
-  --color-sand: #d6995c;
-  --color-coral: #ea4884;
+  /* Palette: blacks/grays come from Tailwind's `zinc` (cool gray) scale; blues below */
+  --color-primary: #090909; /* page background */
+  --color-abyss: #1d2a35; /* darkest blue, gradient stops */
+  --color-ocean: #0d5e8b; /* main blue: chips, borders */
+  --color-lagoon: #0092b8; /* mid cyan: buttons */
+  --color-aqua: #4ac0de; /* light cyan: highlights, active states */
   --animate-orbit: orbit 50s linear infinite;
   --animate-marquee: marquee 50s linear infinite;
   --animate-marquee-vertical: marquee-vertical 50s linear infinite;
@@ -38,7 +31,7 @@
 }
 
 body {
-  background: #090909;
+  background: var(--color-primary);
   font-family: "Funnel Display", sans-serif;
   color: white;
   scroll-behavior: smooth;
@@ -70,7 +63,7 @@ body {
 }
 
 .subtext {
-  @apply text-neutral-200 text-base text-pretty;
+  @apply text-zinc-200 text-base text-pretty;
 }
 
 /* Navigation */
@@ -79,7 +72,7 @@ body {
 }
 
 .nav-li {
-  @apply text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+  @apply text-zinc-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
 }
 
 .nav-link {
@@ -109,27 +102,27 @@ body {
 }
 
 .grid-default-color {
-  @apply p-6 bg-gradient-to-b from-[#0D5E8B] to-[#1E1F22] rounded-2xl;
+  @apply p-6 bg-gradient-to-b from-ocean to-zinc-900 rounded-2xl;
 }
 
 .grid1-color {
-  @apply p-6 bg-gradient-to-b from-[#0D5E8B] to-[#1E1F22] rounded-2xl;
+  @apply p-6 bg-gradient-to-b from-ocean to-zinc-900 rounded-2xl;
 }
 
 .grid2-color {
-  @apply p-6 bg-gradient-to-b from-[#1D2A35] to-[#1E1F22] rounded-2xl;
+  @apply p-6 bg-gradient-to-b from-abyss to-zinc-900 rounded-2xl;
 }
 
 .grid3-color {
-  @apply p-6 bg-gradient-to-b from-[#c7c5c5] to-[#c3c3c3] rounded-2xl;
+  @apply p-6 bg-zinc-300 rounded-2xl;
 }
 
 .grid4-color {
-  @apply p-6 bg-gradient-to-b from-[#4AC0DE] to-[#0D5E8B] rounded-2xl;
+  @apply p-6 bg-gradient-to-b from-aqua to-ocean rounded-2xl;
 }
 
 .grid-black-color {
-  @apply p-6 bg-gradient-to-tl from-[#1D2A35] to-[#0D5E8B] rounded-2xl;
+  @apply p-6 bg-gradient-to-tl from-abyss to-ocean rounded-2xl;
 }
 
 /*Projects Section*/
@@ -143,7 +136,7 @@ body {
 }
 
 .field-input {
-  @apply w-full min-h-10 rounded-md px-3 py-2 text-[16px] bg-white/10 transition duration-200 placeholder-neutral-500 border border-white/10 mt-2;
+  @apply w-full min-h-10 rounded-md px-3 py-2 text-[16px] bg-white/10 transition duration-200 placeholder-zinc-500 border border-white/10 mt-2;
 }
 
 .field-input-focus {

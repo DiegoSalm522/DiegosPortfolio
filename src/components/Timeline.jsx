@@ -31,12 +31,12 @@ const Timeline = ({ data }) => {
         >
           {/* Title */}
           <div className="relative z-10 flex flex-col self-start max-w-xs md:flex-row lg:max-w-sm md:w-full">
-            <div className="absolute flex items-center justify-center w-10 h-10 rounded-full left-3 bg-[#090909]">
+            <div className="absolute flex items-center justify-center w-10 h-10 rounded-full left-3 bg-primary">
               <div
                 className={`w-4 h-4 p-2 border rounded-full ${
                   item.active
-                    ? "bg-cyan-400 border-cyan-200 shadow-[0_0_12px_4px_rgba(34,211,238,0.6)]"
-                    : "bg-neutral-800 border-neutral-700"
+                    ? "bg-aqua border-white/60 shadow-[0_0_12px_4px_rgb(74_192_222/0.6)]"
+                    : "bg-zinc-800 border-zinc-700"
                 }`}
               />
             </div>
@@ -54,12 +54,12 @@ const Timeline = ({ data }) => {
       {/* Track */}
       <div
         style={{ height: `${height}px` }}
-        className="absolute top-0 left-8 overflow-hidden w-[2px] bg-gradient-to-b from-transparent via-neutral-700 to-transparent [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+        className="absolute top-0 left-8 overflow-hidden w-[2px] bg-gradient-to-b from-transparent via-zinc-700 to-transparent [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
       >
         {/* Scroll progress */}
         <motion.div
           style={{ height: heightTransform, opacity: opacityTransform }}
-          className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-cyan-400 from-[0%] via-[#0D5E8B] via-[10%] to-transparent"
+          className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-aqua from-[0%] via-ocean via-[10%] to-transparent"
         />
       </div>
     </div>

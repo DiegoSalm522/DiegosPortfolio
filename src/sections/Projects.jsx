@@ -54,7 +54,7 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col md:items-center gap-4 rounded-2xl bg-[#0B0B0D]"
+            className="flex flex-col md:items-center gap-4 rounded-2xl bg-zinc-950"
           >
             <div className="relative w-full">
               <img
@@ -74,18 +74,18 @@ const Projects = () => {
             <div className="flex-1 px-4 pb-4 flex flex-col gap-3 mb-auto">
               <p className="headtext font-bold">{project.title}</p>
               <p className="subtext">{project.description}</p>
-              <div className="flex flex-wrap gap-1">
+              <div className="flex flex-wrap gap-x-4 gap-y-2">
                 {project.tags.map((tag) => (
                   <div
                     key={tag.id}
-                    className="flex items-center gap-2 bg-black-200 px-3 py-1.5 rounded-lg"
+                    className="flex items-center gap-2"
                   >
                     <img
                       src={tag.path}
                       alt={tag.name}
                       className="w-5 h-5 object-contain"
                     />
-                    <span className="hidden lg:flex text-sm text-white-600">
+                    <span className="hidden lg:flex text-sm text-zinc-400">
                       {tag.name}
                     </span>
                   </div>
@@ -97,7 +97,7 @@ const Projects = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-cyan-600 px-6 py-2 w-[8rem] justify-center rounded-full font-semibold cursor-pointer hover-animation flex items-center gap-2"
+                    className="bg-lagoon px-6 py-2 w-[8rem] justify-center rounded-full font-semibold cursor-pointer hover-animation flex items-center gap-2"
                   >
                     <MdOutlineComputer size={18} />
                     Demo
@@ -108,7 +108,7 @@ const Projects = () => {
                     href={project.repository}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-slate-100 text-black px-6 py-2 w-[8rem] justify-center rounded-full font-semibold cursor-pointer hover-animation flex items-center gap-2"
+                    className="bg-zinc-100 text-black px-6 py-2 w-[8rem] justify-center rounded-full font-semibold cursor-pointer hover-animation flex items-center gap-2"
                   >
                     <FaGithub size={18} />
                     Code
@@ -127,7 +127,7 @@ const Projects = () => {
         >
           <button
             onClick={closeGallery}
-            className="absolute top-4 right-4 text-white hover:text-cyan-400 transition-colors cursor-pointer"
+            className="absolute top-4 right-4 text-white hover:text-aqua transition-colors cursor-pointer"
           >
             <MdClose size={32} />
           </button>
@@ -161,7 +161,7 @@ const Projects = () => {
                       onClick={() => setCurrentImageIndex(index)}
                       className={`w-2 h-2 rounded-full transition-all duration-200 ${
                         index === currentImageIndex
-                          ? "bg-cyan-400 w-8"
+                          ? "bg-aqua w-8"
                           : "bg-white/50 hover:bg-white/80"
                       }`}
                     />

@@ -7,13 +7,13 @@ const Experience = () => {
     active: experience.current,
     title: (
       <div className="font-bold">
-        <p className="text-3xl md:text-4xl text-neutral-200">
+        <p className="text-3xl md:text-4xl text-zinc-200">
           {experience.period}
         </p>
-        <p className="mt-1 text-2xl md:text-3xl text-neutral-400">
+        <p className="mt-1 text-2xl md:text-3xl text-zinc-400">
           {experience.role}
         </p>
-        <p className="text-2xl md:text-3xl text-neutral-500">
+        <p className="text-2xl md:text-3xl text-zinc-500">
           {experience.company}
         </p>
         {experience.logo && (
@@ -26,7 +26,7 @@ const Experience = () => {
       </div>
     ),
     content: (
-      <ul className="pl-5 space-y-4 text-sm list-disc md:text-base text-neutral-300 text-pretty marker:text-cyan-400">
+      <ul className="pl-5 space-y-4 text-sm list-disc md:text-base text-zinc-300 text-pretty marker:text-aqua">
         {experience.description.map((item) => (
           <li key={item.id}>{item.text}</li>
         ))}

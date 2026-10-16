@@ -114,13 +114,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+            className="text-xl font-bold transition-colors text-zinc-400 hover:text-white"
           >
             DS
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
+            className="flex cursor-pointer text-zinc-400 hover:text-white focus:outline-none sm:hidden"
           >
             {isOpen ? (
               <img

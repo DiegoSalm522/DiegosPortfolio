@@ -30,7 +30,7 @@ const Hero = () => {
               Software Developer
             </h1>
             <br />
-            <div className="text-3xl sm:text-5xl text-neutral-300">
+            <div className="text-3xl sm:text-5xl text-zinc-300">
               <FlipWords
                 words={[
                   "Hi! Welcome to my personal portfolio",
@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
         {/* Avatar */}
         <div className="flex-shrink-0">
-          <div className="w-64 h-64 md:mt-10 md:w-100 md:h-100 rounded-full overflow-hidden border-8 border-[#0D5E8B] shadow-2xl">
+          <div className="w-64 h-64 md:mt-10 md:w-100 md:h-100 rounded-full overflow-hidden border-8 border-ocean shadow-2xl">
             <img
               src="/assets/hero/profile.jpg"
               alt="Diego G. Salmones"

@@ -18,7 +18,7 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/20"></div>
           <div className="z-10">
             <p className="headtext">Hi, I'm Diego</p>
-            <p className="text-neutral-200 text-sm md:text-base text-pretty">
+            <p className="text-zinc-200 text-sm md:text-base text-pretty">
               I am a Software Developer with professional experience in Frontend Development (React, JavaScript/TypeScript, Next.js, HTML5, CSS3 and Material UI). Skilled in designing responsive, accessible and high-performance interfaces, integrating APIs and collaborating in Agile teams while applying UI/UX best practices.
             </p>
           </div>
@@ -29,7 +29,7 @@ const About = () => {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500">COURSEWORK</p>
+            <p className="flex items-end text-5xl text-zinc-500">COURSEWORK</p>
             <Card
               style={{ rotate: "-10deg", top: "5%", left: "0%" }}
               text="Software Development"
