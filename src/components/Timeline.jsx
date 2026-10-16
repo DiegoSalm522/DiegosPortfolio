@@ -59,7 +59,7 @@ const Timeline = ({ data }) => {
         {/* Scroll progress */}
         <motion.div
           style={{ height: heightTransform, opacity: opacityTransform }}
-          className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-aqua from-[0%] via-ocean via-[10%] to-transparent"
+          className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-aqua from-[0%] via-aqua via-[10%] to-transparent"
         />
       </div>
     </div>
