@@ -128,9 +128,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"
-            className="text-xl font-bold transition-colors text-zinc-400 hover:text-white"
+            className="transition-opacity opacity-70 hover:opacity-100"
           >
-            DS
+            <img
+              src="/assets/logo-white-sm.png"
+              alt="Diego Salmones logo"
+              className="size-7"
+            />
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
