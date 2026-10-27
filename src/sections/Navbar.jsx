@@ -8,29 +8,7 @@ function Navigation({ closeMenu }) {
   const { t } = useTranslation();
   const handleNavClick = (sectionId, event) => {
     event.preventDefault();
-    let targetElement = document.getElementById(sectionId);
-    if (!targetElement) {
-      targetElement =
-        document.querySelector(`[data-section="${sectionId}"]`) ||
-        document.querySelector(`.${sectionId}-section`);
-    }
-    if (!targetElement && sectionId !== "hero") {
-      const sections = document.querySelectorAll(
-        "main > div, body > div > div"
-      );
-      const sectionMap = {
-        hero: 1,
-        about: 2,
-        skills: 3,
-        experience: 4,
-        projects: 5,
-        contact: 6,
-      };
-      const index = sectionMap[sectionId];
-      if (index && sections[index]) {
-        targetElement = sections[index];
-      }
-    }
+    const targetElement = document.getElementById(sectionId);
     if (closeMenu) {
       closeMenu();
     }
