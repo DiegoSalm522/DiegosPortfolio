@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
 import {
   MdOutlineComputer,
@@ -11,6 +12,7 @@ import {
 import { projects } from "../constants/projects";
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [selectedGallery, setSelectedGallery] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -55,78 +57,83 @@ const Projects = () => {
   return (
     <section id="projects" className="c-space section-spacing">
       {/* Projects */}
-      <h2 className="text-heading">Projects</h2>
+      <h2 className="text-heading">{t("projects.title")}</h2>
       <div className="gap-x-8 gap-y-12 mt-12 grid grid-cols-1 md:grid-cols-2">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="flex flex-col md:items-center gap-4 rounded-2xl bg-zinc-950"
-          >
-            <div className="relative w-full">
-              <img
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-                className="w-full h-auto object-cover rounded-2xl"
-              />
-              {project.gallery && project.gallery.length > 0 && (
-                <button
-                  onClick={() => openGallery(project.gallery)}
-                  aria-label={`Open ${project.title} gallery`}
-                  className="absolute top-3 right-3 bg-black/70 hover:bg-black/90 text-white p-2 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm cursor-pointer"
-                >
-                  <MdPhoto size={28} />
-                </button>
-              )}
-            </div>
-            <div className="flex-1 px-4 pb-4 flex flex-col gap-3 mb-auto">
-              <p className="headtext">{project.title}</p>
-              <p className="subtext">{project.description}</p>
-              <div className="flex flex-wrap gap-x-4 gap-y-2">
-                {project.tags.map((tag) => (
-                  <div
-                    key={tag.id}
-                    className="flex items-center gap-2"
+        {projects.map((project) => {
+          const title = t(`projects.items.${project.slug}.title`);
+          return (
+            <div
+              key={project.id}
+              className="flex flex-col md:items-center gap-4 rounded-2xl bg-zinc-950"
+            >
+              <div className="relative w-full">
+                <img
+                  src={project.image}
+                  alt={title}
+                  loading="lazy"
+                  className="w-full h-auto object-cover rounded-2xl"
+                />
+                {project.gallery && project.gallery.length > 0 && (
+                  <button
+                    onClick={() => openGallery(project.gallery)}
+                    aria-label={t("projects.openGallery", { title })}
+                    className="absolute top-3 right-3 bg-black/70 hover:bg-black/90 text-white p-2 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm cursor-pointer"
                   >
-                    <img
-                      src={tag.path}
-                      alt={tag.name}
-                      loading="lazy"
-                      className="w-5 h-5 object-contain"
-                    />
-                    <span className="hidden lg:flex text-sm text-zinc-400">
-                      {tag.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-3 flex-wrap">
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-lagoon px-6 py-2 w-[8rem] justify-center rounded-full font-semibold cursor-pointer hover-animation flex items-center gap-2"
-                  >
-                    <MdOutlineComputer size={18} />
-                    Demo
-                  </a>
-                )}
-                {project.repository && (
-                  <a
-                    href={project.repository}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-zinc-100 text-black px-6 py-2 w-[8rem] justify-center rounded-full font-semibold cursor-pointer hover-animation flex items-center gap-2"
-                  >
-                    <FaGithub size={18} />
-                    Code
-                  </a>
+                    <MdPhoto size={28} />
+                  </button>
                 )}
               </div>
+              <div className="flex-1 px-4 pb-4 flex flex-col gap-3 mb-auto">
+                <p className="headtext">{title}</p>
+                <p className="subtext">
+                  {t(`projects.items.${project.slug}.description`)}
+                </p>
+                <div className="flex flex-wrap gap-x-4 gap-y-2">
+                  {project.tags.map((tag) => (
+                    <div
+                      key={tag.id}
+                      className="flex items-center gap-2"
+                    >
+                      <img
+                        src={tag.path}
+                        alt={tag.name}
+                        loading="lazy"
+                        className="w-5 h-5 object-contain"
+                      />
+                      <span className="hidden lg:flex text-sm text-zinc-400">
+                        {tag.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex gap-3 flex-wrap">
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-lagoon px-6 py-2 w-[8rem] justify-center rounded-full font-semibold cursor-pointer hover-animation flex items-center gap-2"
+                    >
+                      <MdOutlineComputer size={18} />
+                      {t("projects.demo")}
+                    </a>
+                  )}
+                  {project.repository && (
+                    <a
+                      href={project.repository}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-zinc-100 text-black px-6 py-2 w-[8rem] justify-center rounded-full font-semibold cursor-pointer hover-animation flex items-center gap-2"
+                    >
+                      <FaGithub size={18} />
+                      {t("projects.code")}
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       {/* Gallery */}
       {selectedGallery && (
@@ -136,7 +143,7 @@ const Projects = () => {
         >
           <button
             onClick={closeGallery}
-            aria-label="Close gallery"
+            aria-label={t("projects.closeGallery")}
             className="absolute top-4 right-4 p-1 text-white hover:text-aqua transition-colors cursor-pointer"
           >
             <MdClose size={32} />
@@ -147,7 +154,7 @@ const Projects = () => {
           >
             <motion.img
               src={selectedGallery[currentImageIndex]}
-              alt={`Imagen ${currentImageIndex + 1}`}
+              alt={t("projects.imageAlt", { number: currentImageIndex + 1 })}
               className="w-full h-auto max-h-[70svh] md:max-h-[80svh] object-contain rounded-lg"
               draggable={false}
               drag={selectedGallery.length > 1 ? "x" : false}
@@ -159,7 +166,7 @@ const Projects = () => {
               <div className="mt-4 flex items-center justify-between gap-2 md:contents">
                 <button
                   onClick={prevImage}
-                  aria-label="Previous image"
+                  aria-label={t("projects.previousImage")}
                   className="md:absolute md:left-4 md:top-1/2 md:-translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 cursor-pointer"
                 >
                   <MdChevronLeft size={28} />
@@ -169,7 +176,7 @@ const Projects = () => {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      aria-label={`Go to image ${index + 1}`}
+                      aria-label={t("projects.goToImage", { number: index + 1 })}
                       className="flex items-center justify-center h-8 px-1 cursor-pointer group"
                     >
                       <span
@@ -184,7 +191,7 @@ const Projects = () => {
                 </div>
                 <button
                   onClick={nextImage}
-                  aria-label="Next image"
+                  aria-label={t("projects.nextImage")}
                   className="md:absolute md:right-4 md:top-1/2 md:-translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 cursor-pointer"
                 >
                   <MdChevronRight size={28} />

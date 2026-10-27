@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Marquee from "../components/Marquee";
 import {
   programmingLanguages,
@@ -10,13 +11,14 @@ import {
 import SkillCard from "../components/SkillCard";
 
 const Skills = () => {
+  const { t } = useTranslation();
   return (
     <section id="skills" className="c-space section-spacing">
       <div className="items-start mt-18 md:mt-18">
-        <h2 className="text-heading">Skills</h2>
+        <h2 className="text-heading">{t("skills.title")}</h2>
         <br></br>
         {/*Programming Languages*/}
-        <p className="subtext-heading">Programming Languages</p>
+        <p className="subtext-heading">{t("skills.programmingLanguages")}</p>
         <div className="relative flex flex-col items-center justify-center w-full mt-8 overflow-hidden">
           <Marquee reverse pauseOnHover className="[--duration:20s]">
             {programmingLanguages.map((skill) => (
@@ -28,7 +30,7 @@ const Skills = () => {
         </div>
         <br></br>
         {/*Frontend*/}
-        <p className="subtext-heading">Frontend</p>
+        <p className="subtext-heading">{t("skills.frontend")}</p>
         <div className="relative flex flex-col items-center justify-center w-full mt-8 overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
             {frontend.map((skill) => (
@@ -40,7 +42,7 @@ const Skills = () => {
         </div>
         <br></br>
         {/*Backend & Databases*/}
-        <p className="subtext-heading">Backend & Databases</p>
+        <p className="subtext-heading">{t("skills.backend")}</p>
         <div className="relative flex flex-col items-center justify-center w-full mt-8 overflow-hidden">
           <Marquee reverse pauseOnHover className="[--duration:20s]">
             {backend.map((skill) => (
@@ -52,7 +54,7 @@ const Skills = () => {
         </div>
         <br></br>
         {/*DevOps & Tools*/}
-        <p className="subtext-heading">DevOps & Tools</p>
+        <p className="subtext-heading">{t("skills.devopsTools")}</p>
         <div className="relative flex flex-col items-center justify-center w-full mt-8 overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
             {devopsTools.map((skill) => (
@@ -64,7 +66,7 @@ const Skills = () => {
         </div>
         <br></br>
         {/*AI Tools*/}
-        <p className="subtext-heading">AI Tools</p>
+        <p className="subtext-heading">{t("skills.aiTools")}</p>
         <div className="relative flex flex-col items-center justify-center w-full mt-8 overflow-hidden">
           <Marquee reverse pauseOnHover className="[--duration:20s]">
             {aiTools.map((skill) => (
@@ -76,7 +78,7 @@ const Skills = () => {
         </div>
         <br></br>
         {/*Others*/}
-        <p className="subtext-heading">Others</p>
+        <p className="subtext-heading">{t("skills.others")}</p>
         <div className="relative flex flex-col items-center justify-center w-full mt-8 overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
             {others.map((skill) => (

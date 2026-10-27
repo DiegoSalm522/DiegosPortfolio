@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "../components/LanguageToggle";
+
+const sections = ["hero", "about", "skills", "experience", "projects", "contact"];
 
 function Navigation({ closeMenu }) {
+  const { t } = useTranslation();
   const handleNavClick = (sectionId, event) => {
     event.preventDefault();
     let targetElement = document.getElementById(sectionId);
@@ -47,65 +52,23 @@ function Navigation({ closeMenu }) {
   };
   return (
     <ul className="nav-ul">
-      <li className="nav-li">
-        <a
-          href="#hero"
-          className="nav-link"
-          onClick={(e) => handleNavClick("hero", e)}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-li">
-        <a
-          href="#about"
-          className="nav-link"
-          onClick={(e) => handleNavClick("about", e)}
-        >
-          About
-        </a>
-      </li>
-      <li className="nav-li">
-        <a
-          href="#skills"
-          className="nav-link"
-          onClick={(e) => handleNavClick("skills", e)}
-        >
-          Skills
-        </a>
-      </li>
-      <li className="nav-li">
-        <a
-          href="#experience"
-          className="nav-link"
-          onClick={(e) => handleNavClick("experience", e)}
-        >
-          Experience
-        </a>
-      </li>
-      <li className="nav-li">
-        <a
-          href="#projects"
-          className="nav-link"
-          onClick={(e) => handleNavClick("projects", e)}
-        >
-          Projects
-        </a>
-      </li>
-      <li className="nav-li">
-        <a
-          href="#contact"
-          className="nav-link"
-          onClick={(e) => handleNavClick("contact", e)}
-        >
-          Contact
-        </a>
-      </li>
+      {sections.map((sectionId) => (
+        <li key={sectionId} className="nav-li">
+          <a
+            href={`#${sectionId}`}
+            className="nav-link"
+            onClick={(e) => handleNavClick(sectionId, e)}
+          >
+            {t(`nav.${sectionId === "hero" ? "home" : sectionId}`)}
+          </a>
+        </li>
+      ))}
     </ul>
   );
 }
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => {
     setIsOpen(false);
@@ -132,32 +95,35 @@ const Navbar = () => {
           >
             <img
               src="/assets/logo-white-sm.png"
-              alt="Diego Salmones logo"
+              alt={t("nav.logoAlt")}
               className="size-7"
             />
           </a>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            className="flex cursor-pointer text-zinc-400 hover:text-white focus:outline-none sm:hidden"
-          >
-            {isOpen ? (
-              <img
-                src="/assets/icons/close.svg"
-                alt="Close menu"
-                className="w-6 h-6"
-              />
-            ) : (
-              <img
-                src="/assets/icons/menu.svg"
-                alt="Open menu"
-                className="w-6 h-6"
-              />
-            )}
-          </button>
-          <nav className="hidden sm:flex">
-            <Navigation closeMenu={closeMenu} />
-          </nav>
+          <div className="flex items-center gap-4 md:gap-6">
+            <nav className="hidden sm:flex">
+              <Navigation closeMenu={closeMenu} />
+            </nav>
+            <LanguageToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              aria-expanded={isOpen}
+              className="flex cursor-pointer text-zinc-400 hover:text-white focus:outline-none sm:hidden"
+            >
+              {isOpen ? (
+                <img
+                  src="/assets/icons/close.svg"
+                  alt={t("nav.closeMenu")}
+                  className="w-6 h-6"
+                />
+              ) : (
+                <img
+                  src="/assets/icons/menu.svg"
+                  alt={t("nav.openMenu")}
+                  className="w-6 h-6"
+                />
+              )}
+            </button>
+          </div>
         </div>
       </div>
       {isOpen && (

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FlipWords } from "../components/FlipWords";
 
 const BIRTH_DATE = new Date("2003-05-22T00:00:00");
@@ -14,6 +15,7 @@ const getAge = (birthDate) => {
 };
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
   const age = getAge(BIRTH_DATE);
   return (
     <section
@@ -27,16 +29,17 @@ const Hero = () => {
           <div>
             <h1 className="text-4xl sm:text-6xl font-bold">Diego Salmones</h1>
             <h1 className="text-2xl sm:text-4xl font-medium">
-              Software Developer
+              {t("hero.role")}
             </h1>
             <br />
             <div className="text-3xl sm:text-5xl text-zinc-300">
               <FlipWords
+                key={i18n.resolvedLanguage}
                 words={[
-                  "Hi! Welcome to my personal portfolio",
-                  `I am a ${age} y/o software engineer`,
-                  "Scroll down to explore some of my featured projects",
-                  "Feel free to reach out if you'd like to collaborate!",
+                  t("hero.flipWords.welcome"),
+                  t("hero.flipWords.age", { age }),
+                  t("hero.flipWords.projects"),
+                  t("hero.flipWords.collaborate"),
                 ]}
                 className="text-center md:text-left"
               />

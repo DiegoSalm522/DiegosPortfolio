@@ -1,10 +1,12 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { AnimatePresence } from "motion/react";
+import { useTranslation } from "react-i18next";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setformData] = useState({
     name: "",
     email: "",
@@ -46,11 +48,11 @@ const Contact = () => {
         "YhOMjHZNFwKj8ePHZ"
       );
       setIsLoading(false);
-      showAlertMessage("success", "Your message has been sent");
+      showAlertMessage("success", t("contact.success"));
       setformData({ name: "", email: "", message: "" });
     } catch {
       setIsLoading(false);
-      showAlertMessage("danger", "Something went wrong");
+      showAlertMessage("danger", t("contact.error"));
     }
   };
 
@@ -71,19 +73,19 @@ const Contact = () => {
       </AnimatePresence>
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-zinc-900">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Contact Me</h2>
+          <h2 className="text-heading">{t("contact.title")}</h2>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
             <label htmlFor="name" className="field-label">
-              Full Name
+              {t("contact.name")}
             </label>
             <input
               id="name"
               name="name"
               type="text"
               className="field-input field-input-focus"
-              placeholder="Your full name"
+              placeholder={t("contact.namePlaceholder")}
               autoComplete="name"
               value={formData.name}
               onChange={handleChange}
@@ -92,14 +94,14 @@ const Contact = () => {
           </div>
           <div className="mb-5">
             <label htmlFor="email" className="field-label">
-              Email
+              {t("contact.email")}
             </label>
             <input
               id="email"
               name="email"
               type="email"
               className="field-input field-input-focus"
-              placeholder="Your email"
+              placeholder={t("contact.emailPlaceholder")}
               autoComplete="email"
               value={formData.email}
               onChange={handleChange}
@@ -108,7 +110,7 @@ const Contact = () => {
           </div>
           <div className="mb-5">
             <label htmlFor="message" className="field-label">
-              Message
+              {t("contact.message")}
             </label>
             <textarea
               id="message"
@@ -116,7 +118,7 @@ const Contact = () => {
               type="text"
               rows="4"
               className="field-input field-input-focus"
-              placeholder="Write your message"
+              placeholder={t("contact.messagePlaceholder")}
               autoComplete="message"
               value={formData.message}
               onChange={handleChange}
@@ -124,7 +126,7 @@ const Contact = () => {
             />
           </div>
           <button className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-lagoon hover-animation">
-            {!isLoading ? "Send" : "Sending..."}
+            {!isLoading ? t("contact.send") : t("contact.sending")}
           </button>
         </form>
       </div>

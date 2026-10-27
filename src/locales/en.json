@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "Diego's Portfolio"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "logoAlt": "Diego Salmones logo",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "role": "Software Developer",
+    "flipWords": {
+      "welcome": "Hi! Welcome to my personal portfolio",
+      "age": "I am a {{age}} y/o software engineer",
+      "projects": "Scroll down to explore some of my featured projects",
+      "collaborate": "Feel free to reach out if you'd like to collaborate!"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "greeting": "Hi, I'm Diego",
+    "bio": "I am a Software Developer with professional experience in Frontend Development (React, JavaScript/TypeScript, Next.js, HTML5, CSS3 and Material UI). Skilled in designing responsive, accessible and high-performance interfaces, integrating APIs and collaborating in Agile teams while applying UI/UX best practices.",
+    "coursework": {
+      "title": "COURSEWORK",
+      "softwareDevelopment": "Software Development",
+      "oop": "OOP",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "webPages": "Web Pages",
+      "mobileApps": "Mobile Applications",
+      "videoGames": "Video Games",
+      "uiux": "UI/UX",
+      "dataStructures": "Data Structures",
+      "algorithms": "Algorithms",
+      "databases": "Databases",
+      "ai": "AI",
+      "apis": "APIs",
+      "scrum": "SCRUM"
+    },
+    "education": {
+      "title": "Education",
+      "logoAlt": "Tec de Monterrey logo",
+      "degree": "B.S. in Computer Science and Technology @ ITESM (2021-2025)"
+    },
+    "downloadResume": "Download my Resume"
+  },
+  "skills": {
+    "title": "Skills",
+    "programmingLanguages": "Programming Languages",
+    "frontend": "Frontend",
+    "backend": "Backend & Databases",
+    "devopsTools": "DevOps & Tools",
+    "aiTools": "AI Tools",
+    "others": "Others"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "logoAlt": "{{company}} logo",
+    "items": {
+      "otif": {
+        "period": "Jan 2026 - Present",
+        "role": "Frontend Developer",
+        "bullets": [
+          "Developed responsive UI components and frontend features for a logistics SaaS company's web platforms (otif.mx and sgl.otif.mx) using React, TypeScript, Next.js and Material UI, working in Agile sprints alongside backend developers and UI/UX designers.",
+          "Built an end-to-end OTIF Careers platform covering the public job application flow with AI-powered resume autofill, HR management of job openings, candidates, application statuses and interview scheduling with calendar views, and an interviewer portal to review candidates, take notes and submit evaluations.",
+          "Collaborated on the redesign of vendor and customer management in SGL, Super Grid Logistics' internal platform used by 120+ employees to manage 15,000+ vendors, 90+ customers, 11,000+ quotes and 1,300+ shipments, and shipped new features such as route demand, biddings and a Vendor/Customer Intelligence module.",
+          "Enhanced UI/UX in otif.mx with AI-powered dashboards summarizing user tasks and priorities, real-time text streaming in Smart Documents chats, floating action buttons and i18n translations.",
+          "Resolved frontend bugs and implemented improvements based on user feedback, participated in code reviews and documented reusable UI components in Storybook."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "demo": "Demo",
+    "code": "Code",
+    "openGallery": "Open {{title}} gallery",
+    "closeGallery": "Close gallery",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "goToImage": "Go to image {{number}}",
+    "imageAlt": "Image {{number}}",
+    "items": {
+      "diegos-portfolio": {
+        "title": "Diego's Portfolio",
+        "description": "Personal portfolio website showcasing my work experience, software development projects and skills."
+      },
+      "phone-planet": {
+        "title": "Phone Planet",
+        "description": "E-commerce web application for a cellphone store featuring 8 brands, 180+ products and 800+ variants."
+      },
+      "sw-blog": {
+        "title": "Star Wars Planets Blog",
+        "description": "Web application inspired by the Star Wars universe to explore and learn about different planets through a blog-style interface."
+      },
+      "popflix": {
+        "title": "Popflix",
+        "description": "Streaming-style web application powered by the TMDB API, showcasing movies and TV shows."
+      },
+      "bazaar": {
+        "title": "Bazaar Profit Management Dashboard",
+        "description": "System for managing the profits of a children's hospital bazaar, combining a mobile app for sellers and a web platform for administrators."
+      },
+      "expo-ingenierias": {
+        "title": "Expoingenierias Web Platform",
+        "description": "Web platform developed for managing the engineering projects exhibition at my university, including project registration, evaluation and administration."
+      },
+      "reecicla-app": {
+        "title": "Reecicla App",
+        "description": "Mobile app for iOS and Android developed for a recycling company; users are able to request home recycling pickups or locate drop-off points on a map."
+      },
+      "grief": {
+        "title": "Grief: The Journey of Loss - Video Game",
+        "description": "3D emotional adventure video game combining platforming and puzzle mechanics, exploring the stages of grief through the story of Darwin."
+      },
+      "pacman": {
+        "title": "2D Pacman",
+        "description": "2D recreation of the classic Pacman video game, built with OpenGL and C++."
+      },
+      "compiler": {
+        "title": "Little Duck Compiler",
+        "description": "Compiler for the mini-imperative language Little Duck, implementing lexical, syntactic and semantic analysis phases."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "name": "Full Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "Your email",
+    "message": "Message",
+    "messagePlaceholder": "Write your message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Your message has been sent",
+    "error": "Something went wrong"
+  },
+  "footer": {
+    "rights": "© {{year}} Diego Salmones. All rights reserved."
+  }
+}

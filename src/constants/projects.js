@@ -1,9 +1,7 @@
 export const projects = [
   {
     id: 1,
-    title: "Diego's Portfolio",
-    description:
-      "Personal portfolio website showcasing my work experience, software development projects and skills.",
+    slug: "diegos-portfolio",
     demo: "https://diegosalmones-portfolio.vercel.app/",
     repository: "https://github.com/DiegoSalm522/DiegosPortfolio",
     image: "/assets/projects/diegos-portfolio/img0.webp",
@@ -40,9 +38,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Phone Planet",
-    description:
-      "E-commerce web application for a cellphone store featuring 8 brands, 180+ products and 800+ variants.",
+    slug: "phone-planet",
     demo: "https://phone-planet.vercel.app/",
     repository: "https://github.com/DiegoSalm522/PhonePlanet",
     image: "/assets/projects/phone-planet/img0.webp",
@@ -81,9 +77,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Star Wars Planets Blog",
-    description:
-      "Web application inspired by the Star Wars universe to explore and learn about different planets through a blog-style interface.",
+    slug: "sw-blog",
     demo: "https://star-wars-blog-ten.vercel.app/",
     repository: "https://github.com/DiegoSalm522/StarWarsBlog",
     image: "/assets/projects/sw-blog/img0.webp",
@@ -135,9 +129,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Popflix",
-    description:
-      "Streaming-style web application powered by the TMDB API, showcasing movies and TV shows.",
+    slug: "popflix",
     demo: "https://popflix-three.vercel.app/",
     repository: "https://github.com/DiegoSalm522/Popflix",
     image: "/assets/projects/popflix/img0.webp",
@@ -176,9 +168,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Bazaar Profit Management Dashboard",
-    description:
-      "System for managing the profits of a children's hospital bazaar, combining a mobile app for sellers and a web platform for administrators.",
+    slug: "bazaar",
     repository: "https://github.com/ErwinPo/BazarAdmin",
     image: "/assets/projects/bazaar/img0.webp",
     gallery: [
@@ -219,9 +209,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Expoingenierias Web Platform",
-    description:
-      "Web platform developed for managing the engineering projects exhibition at my university, including project registration, evaluation and administration.",
+    slug: "expo-ingenierias",
     repository: "https://github.com/RogerHdzC/TC2005B",
     image: "/assets/projects/expo-ingenierias/img0.webp",
     gallery: [
@@ -270,9 +258,7 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Reecicla App",
-    description:
-      "Mobile app for iOS and Android developed for a recycling company; users are able to request home recycling pickups or locate drop-off points on a map.",
+    slug: "reecicla-app",
     repository: "https://github.com/DiegoSalm522/Reecicla-App",
     image: "/assets/projects/reecicla-app/cover.webp",
     gallery: [
@@ -318,9 +304,7 @@ export const projects = [
   },
   {
     id: 8,
-    title: "Grief: The Journey of Loss - Video Game",
-    description:
-      "3D emotional adventure video game combining platforming and puzzle mechanics, exploring the stages of grief through the story of Darwin.",
+    slug: "grief",
     demo: "https://diegosalm522.itch.io/grief-the-journey-of-loss",
     repository: "",
     image: "/assets/projects/grief/img0.webp",
@@ -357,9 +341,7 @@ export const projects = [
   },
   {
     id: 9,
-    title: "2D Pacman",
-    description:
-      "2D recreation of the classic Pacman video game, built with OpenGL and C++.",
+    slug: "pacman",
     repository: "https://github.com/DiegoSalm522/Pacman",
     image: "/assets/projects/pacman/img0.webp",
     gallery: ["/assets/projects/pacman/img0.webp"],
@@ -383,9 +365,7 @@ export const projects = [
   },
   {
     id: 10,
-    title: "Little Duck Compiler",
-    description:
-      "Compiler for the mini-imperative language Little Duck, implementing lexical, syntactic and semantic analysis phases.",
+    slug: "compiler",
     repository: "https://github.com/DiegoSalm522/Proyecto-Patito",
     image: "/assets/projects/compiler/img0.webp",
     gallery: ["/assets/projects/compiler/img0.webp"],

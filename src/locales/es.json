@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "Portafolio de Diego"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "logoAlt": "Logo de Diego Salmones",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma"
+  },
+  "hero": {
+    "role": "Desarrollador de Software",
+    "flipWords": {
+      "welcome": "¡Hola! Bienvenid@ a mi portafolio personal",
+      "age": "Soy un ingeniero de software de {{age}} años",
+      "projects": "Desliza hacia abajo para explorar algunos de mis proyectos destacados",
+      "collaborate": "¡No dudes en contactarme si quieres colaborar!"
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "greeting": "Hola, soy Diego",
+    "bio": "Soy Desarrollador de Software con experiencia profesional en Desarrollo Frontend (React, JavaScript/TypeScript, Next.js, HTML5, CSS3 y Material UI). Me especializo en diseñar interfaces responsivas, accesibles y de alto rendimiento, integrar APIs y colaborar en equipos ágiles aplicando buenas prácticas de UI/UX.",
+    "coursework": {
+      "title": "FORMACIÓN",
+      "softwareDevelopment": "Desarrollo de Software",
+      "oop": "POO",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "webPages": "Páginas Web",
+      "mobileApps": "Aplicaciones Móviles",
+      "videoGames": "Videojuegos",
+      "uiux": "UI/UX",
+      "dataStructures": "Estructuras de Datos",
+      "algorithms": "Algoritmos",
+      "databases": "Bases de Datos",
+      "ai": "IA",
+      "apis": "APIs",
+      "scrum": "SCRUM"
+    },
+    "education": {
+      "title": "Educación",
+      "logoAlt": "Logo del Tec de Monterrey",
+      "degree": "Ingeniería en Tecnologías Computacionales @ ITESM (2021-2025)"
+    },
+    "downloadResume": "Descargar mi CV"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "programmingLanguages": "Lenguajes de Programación",
+    "frontend": "Frontend",
+    "backend": "Backend y Bases de Datos",
+    "devopsTools": "DevOps y Herramientas",
+    "aiTools": "Herramientas de IA",
+    "others": "Otros"
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "logoAlt": "Logo de {{company}}",
+    "items": {
+      "otif": {
+        "period": "Ene 2026 - Actualidad",
+        "role": "Desarrollador Frontend",
+        "bullets": [
+          "Desarrollé componentes de UI responsivos y funcionalidades frontend para las plataformas web de una empresa SaaS de logística (otif.mx y sgl.otif.mx) con React, TypeScript, Next.js y Material UI, trabajando en sprints ágiles junto a desarrolladores backend y diseñadores UI/UX.",
+          "Construí de principio a fin la plataforma OTIF Careers, que abarca el flujo público de postulación con autollenado del CV mediante IA, la gestión de vacantes, candidatos, estatus de postulaciones y agenda de entrevistas con vistas de calendario para RR. HH., y un portal para entrevistadores donde revisan candidatos, toman notas y envían evaluaciones.",
+          "Colaboré en el rediseño de la gestión de proveedores y clientes en SGL, la plataforma interna de Super Grid Logistics usada por más de 120 empleados para administrar más de 15,000 proveedores, 90 clientes, 11,000 cotizaciones y 1,300 envíos, y entregué nuevas funcionalidades como demanda de rutas, licitaciones y un módulo de Inteligencia de Proveedores/Clientes.",
+          "Mejoré la UI/UX de otif.mx con dashboards impulsados por IA que resumen las tareas y prioridades del usuario, streaming de texto en tiempo real en los chats de Smart Documents, botones de acción flotantes y traducciones con i18n.",
+          "Resolví bugs de frontend e implementé mejoras basadas en la retroalimentación de usuarios, participé en code reviews y documenté componentes de UI reutilizables en Storybook."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "demo": "Demo",
+    "code": "Código",
+    "openGallery": "Abrir galería de {{title}}",
+    "closeGallery": "Cerrar galería",
+    "previousImage": "Imagen anterior",
+    "nextImage": "Imagen siguiente",
+    "goToImage": "Ir a la imagen {{number}}",
+    "imageAlt": "Imagen {{number}}",
+    "items": {
+      "diegos-portfolio": {
+        "title": "Portafolio de Diego",
+        "description": "Portafolio personal que muestra mi experiencia laboral, proyectos de desarrollo de software y habilidades."
+      },
+      "phone-planet": {
+        "title": "Phone Planet",
+        "description": "Aplicación web de e-commerce para una tienda de celulares con 8 marcas, más de 180 productos y más de 800 variantes."
+      },
+      "sw-blog": {
+        "title": "Blog de Planetas de Star Wars",
+        "description": "Aplicación web inspirada en el universo de Star Wars para explorar y conocer distintos planetas a través de una interfaz estilo blog."
+      },
+      "popflix": {
+        "title": "Popflix",
+        "description": "Aplicación web estilo plataforma de streaming que muestra películas y series usando la API de TMDB."
+      },
+      "bazaar": {
+        "title": "Dashboard de Gestión de Ganancias de Bazar",
+        "description": "Sistema para administrar las ganancias del bazar de un hospital infantil, que combina una app móvil para vendedores y una plataforma web para administradores."
+      },
+      "expo-ingenierias": {
+        "title": "Plataforma Web de Expoingenierías",
+        "description": "Plataforma web desarrollada para gestionar la exposición de proyectos de ingeniería de mi universidad, incluyendo registro, evaluación y administración de proyectos."
+      },
+      "reecicla-app": {
+        "title": "Reecicla App",
+        "description": "App móvil para iOS y Android desarrollada para una empresa de reciclaje; los usuarios pueden solicitar recolecciones a domicilio o encontrar puntos de acopio en un mapa."
+      },
+      "grief": {
+        "title": "Grief: The Journey of Loss - Videojuego",
+        "description": "Videojuego 3D de aventura emocional que combina mecánicas de plataformas y puzzles, explorando las etapas del duelo a través de la historia de Darwin."
+      },
+      "pacman": {
+        "title": "Pacman 2D",
+        "description": "Recreación en 2D del clásico videojuego Pacman, hecha con OpenGL y C++."
+      },
+      "compiler": {
+        "title": "Compilador Little Duck",
+        "description": "Compilador para el lenguaje mini-imperativo Little Duck, que implementa las fases de análisis léxico, sintáctico y semántico."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "name": "Nombre completo",
+    "namePlaceholder": "Tu nombre completo",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "Tu correo electrónico",
+    "message": "Mensaje",
+    "messagePlaceholder": "Escribe tu mensaje",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "success": "Tu mensaje ha sido enviado",
+    "error": "Algo salió mal"
+  },
+  "footer": {
+    "rights": "© {{year}} Diego Salmones. Todos los derechos reservados."
+  }
+}
