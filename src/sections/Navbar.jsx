@@ -94,7 +94,7 @@ const Navbar = () => {
             className="transition-opacity opacity-70 hover:opacity-100"
           >
             <img
-              src="/assets/logo-white-sm.png"
+              src="/assets/brand/logo-white-sm.webp"
               alt={t("nav.logoAlt")}
               className="size-7"
             />
