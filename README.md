@@ -9,7 +9,7 @@ A responsive, modern personal portfolio showcasing my work experience, software 
 ## 🧠 Sections
 
 - 🏠 **Hero** — Personal introduction with animated text
-- 👨‍💻 **About Me** — Bento grid with my background, education and resume download
+- 👨‍💻 **About Me** — Grid with my background, education and resume download
 - ⚙️ **Skills** — Animated marquees grouped by languages, frontend, backend, DevOps, AI tools and more
 - 💼 **Work Experience** — Timeline of roles and responsibilities
 - 🧩 **Projects** — Project cards with tech tags, live demo / repository links and an image gallery lightbox
